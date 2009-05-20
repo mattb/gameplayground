@@ -122,6 +122,11 @@
 		D9A252C90FC4B42B00FE9D56 /* Water Block.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2528F0FC4B42B00FE9D56 /* Water Block.png */; };
 		D9A252CA0FC4B42B00FE9D56 /* Window Tall.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252900FC4B42B00FE9D56 /* Window Tall.png */; };
 		D9A252CB0FC4B42B00FE9D56 /* Wood Block.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252910FC4B42B00FE9D56 /* Wood Block.png */; };
+		D9A252CE0FC4B4CB00FE9D56 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A252CD0FC4B4CB00FE9D56 /* MainScene.m */; };
+		D9A252D40FC4B50000FE9D56 /* GroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A252D30FC4B50000FE9D56 /* GroundLayer.m */; };
+		D9A252D70FC4B59C00FE9D56 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A252D60FC4B59C00FE9D56 /* Block.m */; };
+		D9A253D00FC4BF3300FE9D56 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A253CF0FC4BF3300FE9D56 /* Player.m */; };
+		D9A253D50FC4BF7400FE9D56 /* CharacterLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A253D40FC4BF7400FE9D56 /* CharacterLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -298,6 +303,16 @@
 		D9A2528F0FC4B42B00FE9D56 /* Water Block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Water Block.png"; sourceTree = "<group>"; };
 		D9A252900FC4B42B00FE9D56 /* Window Tall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Window Tall.png"; sourceTree = "<group>"; };
 		D9A252910FC4B42B00FE9D56 /* Wood Block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wood Block.png"; sourceTree = "<group>"; };
+		D9A252CC0FC4B4CB00FE9D56 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
+		D9A252CD0FC4B4CB00FE9D56 /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
+		D9A252D20FC4B50000FE9D56 /* GroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroundLayer.h; sourceTree = "<group>"; };
+		D9A252D30FC4B50000FE9D56 /* GroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroundLayer.m; sourceTree = "<group>"; };
+		D9A252D50FC4B59C00FE9D56 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
+		D9A252D60FC4B59C00FE9D56 /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
+		D9A253CE0FC4BF3300FE9D56 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		D9A253CF0FC4BF3300FE9D56 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		D9A253D30FC4BF7400FE9D56 /* CharacterLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterLayer.h; sourceTree = "<group>"; };
+		D9A253D40FC4BF7400FE9D56 /* CharacterLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +334,9 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D9A252D10FC4B4EB00FE9D56 /* Layers */,
+				D9A252D00FC4B4E500FE9D56 /* Sprites */,
+				D9A252CF0FC4B4E000FE9D56 /* Scenes */,
 				1D3623240D0F684500981E51 /* GameAppDelegate.h */,
 				1D3623250D0F684500981E51 /* GameAppDelegate.m */,
 			);
@@ -560,6 +578,37 @@
 			path = "PlanetCute PNG";
 			sourceTree = "<group>";
 		};
+		D9A252CF0FC4B4E000FE9D56 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D9A252CC0FC4B4CB00FE9D56 /* MainScene.h */,
+				D9A252CD0FC4B4CB00FE9D56 /* MainScene.m */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		D9A252D00FC4B4E500FE9D56 /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				D9A252D50FC4B59C00FE9D56 /* Block.h */,
+				D9A252D60FC4B59C00FE9D56 /* Block.m */,
+				D9A253CE0FC4BF3300FE9D56 /* Player.h */,
+				D9A253CF0FC4BF3300FE9D56 /* Player.m */,
+			);
+			name = Sprites;
+			sourceTree = "<group>";
+		};
+		D9A252D10FC4B4EB00FE9D56 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				D9A252D20FC4B50000FE9D56 /* GroundLayer.h */,
+				D9A252D30FC4B50000FE9D56 /* GroundLayer.m */,
+				D9A253D30FC4BF7400FE9D56 /* CharacterLayer.h */,
+				D9A253D40FC4BF7400FE9D56 /* CharacterLayer.m */,
+			);
+			name = Layers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -722,6 +771,11 @@
 				D942A6380FC4B2E20024211E /* TouchDispatcher.m in Sources */,
 				D942A6390FC4B2E20024211E /* TouchHandler.m in Sources */,
 				D942A63A0FC4B2E20024211E /* Transition.m in Sources */,
+				D9A252CE0FC4B4CB00FE9D56 /* MainScene.m in Sources */,
+				D9A252D40FC4B50000FE9D56 /* GroundLayer.m in Sources */,
+				D9A252D70FC4B59C00FE9D56 /* Block.m in Sources */,
+				D9A253D00FC4BF3300FE9D56 /* Player.m in Sources */,
+				D9A253D50FC4BF7400FE9D56 /* CharacterLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
