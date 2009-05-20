@@ -9,30 +9,27 @@
 #import "GameAppDelegate.h"
 
 // import cocos2d classes you'll need:
-//#import "cocos2d.h"
-//#import "Scene.h"
+#import "cocos2d.h"
+#import "Scene.h"
 
 
 @implementation GameAppDelegate
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
-	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [window setUserInteractionEnabled:YES];
     [window setMultipleTouchEnabled:YES];
 	
-	// set up Director, probably something like this:
-	/*
-	[[Director sharedDirector] setDeviceOrientation:CCDeviceOrientationLandscapeLeft];
+    [[Director sharedDirector] setPixelFormat:kRGBA8];
+    [Texture2D setDefaultAlphaPixelFormat:kTexture2DPixelFormat_RGBA8888];
+  
+    [[Director sharedDirector] setDeviceOrientation:CCDeviceOrientationLandscapeLeft];
     [[Director sharedDirector] attachInWindow:window];
-	*/
 	
     [window makeKeyAndVisible];	
 	
-	// make a scene, probably something like this:
-	/*
-	Scene *scene = [Scene node];
-	[[Director sharedDirector] runWithScene:scene];
-	*/
+	  Scene *scene = [Scene node];
+    [[Director sharedDirector] runWithScene:scene];
 }
 
 

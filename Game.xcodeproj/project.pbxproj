@@ -64,6 +64,64 @@
 		D942A6390FC4B2E20024211E /* TouchHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D942A6080FC4B2E20024211E /* TouchHandler.m */; };
 		D942A63A0FC4B2E20024211E /* Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = D942A60A0FC4B2E20024211E /* Transition.m */; };
 		D942A63C0FC4B2EB0024211E /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = D942A63B0FC4B2EB0024211E /* fps_images.png */; };
+		D9A252920FC4B42B00FE9D56 /* Brown Block.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252580FC4B42B00FE9D56 /* Brown Block.png */; };
+		D9A252930FC4B42B00FE9D56 /* Character Boy.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252590FC4B42B00FE9D56 /* Character Boy.png */; };
+		D9A252940FC4B42B00FE9D56 /* Character Cat Girl.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2525A0FC4B42B00FE9D56 /* Character Cat Girl.png */; };
+		D9A252950FC4B42B00FE9D56 /* Character Horn Girl.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2525B0FC4B42B00FE9D56 /* Character Horn Girl.png */; };
+		D9A252960FC4B42B00FE9D56 /* Character Pink Girl.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2525C0FC4B42B00FE9D56 /* Character Pink Girl.png */; };
+		D9A252970FC4B42B00FE9D56 /* Character Princess Girl.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2525D0FC4B42B00FE9D56 /* Character Princess Girl.png */; };
+		D9A252980FC4B42B00FE9D56 /* Chest Closed.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2525E0FC4B42B00FE9D56 /* Chest Closed.png */; };
+		D9A252990FC4B42B00FE9D56 /* Chest Lid.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2525F0FC4B42B00FE9D56 /* Chest Lid.png */; };
+		D9A2529A0FC4B42B00FE9D56 /* Chest Open.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252600FC4B42B00FE9D56 /* Chest Open.png */; };
+		D9A2529B0FC4B42B00FE9D56 /* Dirt Block.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252610FC4B42B00FE9D56 /* Dirt Block.png */; };
+		D9A2529C0FC4B42B00FE9D56 /* Door Tall Closed.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252620FC4B42B00FE9D56 /* Door Tall Closed.png */; };
+		D9A2529D0FC4B42B00FE9D56 /* Door Tall Open.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252630FC4B42B00FE9D56 /* Door Tall Open.png */; };
+		D9A2529E0FC4B42B00FE9D56 /* Enemy Bug.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252640FC4B42B00FE9D56 /* Enemy Bug.png */; };
+		D9A2529F0FC4B42B00FE9D56 /* Gem Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252650FC4B42B00FE9D56 /* Gem Blue.png */; };
+		D9A252A00FC4B42B00FE9D56 /* Gem Green.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252660FC4B42B00FE9D56 /* Gem Green.png */; };
+		D9A252A10FC4B42B00FE9D56 /* Gem Orange.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252670FC4B42B00FE9D56 /* Gem Orange.png */; };
+		D9A252A20FC4B42B00FE9D56 /* Grass Block.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252680FC4B42B00FE9D56 /* Grass Block.png */; };
+		D9A252A30FC4B42B00FE9D56 /* Heart.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252690FC4B42B00FE9D56 /* Heart.png */; };
+		D9A252A40FC4B42B00FE9D56 /* Key.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2526A0FC4B42B00FE9D56 /* Key.png */; };
+		D9A252A50FC4B42B00FE9D56 /* Plain Block.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2526B0FC4B42B00FE9D56 /* Plain Block.png */; };
+		D9A252A60FC4B42B00FE9D56 /* PlanetCuteShadowMockup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D9A2526C0FC4B42B00FE9D56 /* PlanetCuteShadowMockup.jpg */; };
+		D9A252A70FC4B42B00FE9D56 /* PlanetCuteShadowTest.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2526D0FC4B42B00FE9D56 /* PlanetCuteShadowTest.png */; };
+		D9A252A80FC4B42B00FE9D56 /* Ramp East.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2526E0FC4B42B00FE9D56 /* Ramp East.png */; };
+		D9A252A90FC4B42B00FE9D56 /* Ramp North.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2526F0FC4B42B00FE9D56 /* Ramp North.png */; };
+		D9A252AA0FC4B42B00FE9D56 /* Ramp South.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252700FC4B42B00FE9D56 /* Ramp South.png */; };
+		D9A252AB0FC4B42B00FE9D56 /* Ramp West.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252710FC4B42B00FE9D56 /* Ramp West.png */; };
+		D9A252AC0FC4B42B00FE9D56 /* Rock.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252720FC4B42B00FE9D56 /* Rock.png */; };
+		D9A252AD0FC4B42B00FE9D56 /* Roof East.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252730FC4B42B00FE9D56 /* Roof East.png */; };
+		D9A252AE0FC4B42B00FE9D56 /* Roof North East.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252740FC4B42B00FE9D56 /* Roof North East.png */; };
+		D9A252AF0FC4B42B00FE9D56 /* Roof North West.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252750FC4B42B00FE9D56 /* Roof North West.png */; };
+		D9A252B00FC4B42B00FE9D56 /* Roof North.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252760FC4B42B00FE9D56 /* Roof North.png */; };
+		D9A252B10FC4B42B00FE9D56 /* Roof South East.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252770FC4B42B00FE9D56 /* Roof South East.png */; };
+		D9A252B20FC4B42B00FE9D56 /* Roof South West.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252780FC4B42B00FE9D56 /* Roof South West.png */; };
+		D9A252B30FC4B42B00FE9D56 /* Roof South.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252790FC4B42B00FE9D56 /* Roof South.png */; };
+		D9A252B40FC4B42B00FE9D56 /* Roof West.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2527A0FC4B42B00FE9D56 /* Roof West.png */; };
+		D9A252B50FC4B42B00FE9D56 /* Selector.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2527B0FC4B42B00FE9D56 /* Selector.png */; };
+		D9A252B60FC4B42B00FE9D56 /* Shadow East.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2527C0FC4B42B00FE9D56 /* Shadow East.png */; };
+		D9A252B70FC4B42B00FE9D56 /* Shadow North East.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2527D0FC4B42B00FE9D56 /* Shadow North East.png */; };
+		D9A252B80FC4B42B00FE9D56 /* Shadow North West.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2527E0FC4B42B00FE9D56 /* Shadow North West.png */; };
+		D9A252B90FC4B42B00FE9D56 /* Shadow North.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2527F0FC4B42B00FE9D56 /* Shadow North.png */; };
+		D9A252BA0FC4B42B00FE9D56 /* Shadow Side West.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252800FC4B42B00FE9D56 /* Shadow Side West.png */; };
+		D9A252BB0FC4B42B00FE9D56 /* Shadow South East.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252810FC4B42B00FE9D56 /* Shadow South East.png */; };
+		D9A252BC0FC4B42B00FE9D56 /* Shadow South West.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252820FC4B42B00FE9D56 /* Shadow South West.png */; };
+		D9A252BD0FC4B42B00FE9D56 /* Shadow South.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252830FC4B42B00FE9D56 /* Shadow South.png */; };
+		D9A252BE0FC4B42B00FE9D56 /* Shadow West.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252840FC4B42B00FE9D56 /* Shadow West.png */; };
+		D9A252BF0FC4B42B00FE9D56 /* SpeechBubble.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252850FC4B42B00FE9D56 /* SpeechBubble.png */; };
+		D9A252C00FC4B42B00FE9D56 /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252860FC4B42B00FE9D56 /* Star.png */; };
+		D9A252C10FC4B42B00FE9D56 /* Stone Block Tall.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252870FC4B42B00FE9D56 /* Stone Block Tall.png */; };
+		D9A252C20FC4B42B00FE9D56 /* Stone Block.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252880FC4B42B00FE9D56 /* Stone Block.png */; };
+		D9A252C30FC4B42B00FE9D56 /* Thumbs.db in Resources */ = {isa = PBXBuildFile; fileRef = D9A252890FC4B42B00FE9D56 /* Thumbs.db */; };
+		D9A252C40FC4B42B00FE9D56 /* Tree Short.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2528A0FC4B42B00FE9D56 /* Tree Short.png */; };
+		D9A252C50FC4B42B00FE9D56 /* Tree Tall.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2528B0FC4B42B00FE9D56 /* Tree Tall.png */; };
+		D9A252C60FC4B42B00FE9D56 /* Tree Ugly.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2528C0FC4B42B00FE9D56 /* Tree Ugly.png */; };
+		D9A252C70FC4B42B00FE9D56 /* Wall Block Tall.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2528D0FC4B42B00FE9D56 /* Wall Block Tall.png */; };
+		D9A252C80FC4B42B00FE9D56 /* Wall Block.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2528E0FC4B42B00FE9D56 /* Wall Block.png */; };
+		D9A252C90FC4B42B00FE9D56 /* Water Block.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2528F0FC4B42B00FE9D56 /* Water Block.png */; };
+		D9A252CA0FC4B42B00FE9D56 /* Window Tall.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252900FC4B42B00FE9D56 /* Window Tall.png */; };
+		D9A252CB0FC4B42B00FE9D56 /* Wood Block.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252910FC4B42B00FE9D56 /* Wood Block.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -182,6 +240,64 @@
 		D942A6090FC4B2E20024211E /* Transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transition.h; sourceTree = "<group>"; };
 		D942A60A0FC4B2E20024211E /* Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transition.m; sourceTree = "<group>"; };
 		D942A63B0FC4B2EB0024211E /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fps_images.png; sourceTree = "<group>"; };
+		D9A252580FC4B42B00FE9D56 /* Brown Block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Brown Block.png"; sourceTree = "<group>"; };
+		D9A252590FC4B42B00FE9D56 /* Character Boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Character Boy.png"; sourceTree = "<group>"; };
+		D9A2525A0FC4B42B00FE9D56 /* Character Cat Girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Character Cat Girl.png"; sourceTree = "<group>"; };
+		D9A2525B0FC4B42B00FE9D56 /* Character Horn Girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Character Horn Girl.png"; sourceTree = "<group>"; };
+		D9A2525C0FC4B42B00FE9D56 /* Character Pink Girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Character Pink Girl.png"; sourceTree = "<group>"; };
+		D9A2525D0FC4B42B00FE9D56 /* Character Princess Girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Character Princess Girl.png"; sourceTree = "<group>"; };
+		D9A2525E0FC4B42B00FE9D56 /* Chest Closed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chest Closed.png"; sourceTree = "<group>"; };
+		D9A2525F0FC4B42B00FE9D56 /* Chest Lid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chest Lid.png"; sourceTree = "<group>"; };
+		D9A252600FC4B42B00FE9D56 /* Chest Open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chest Open.png"; sourceTree = "<group>"; };
+		D9A252610FC4B42B00FE9D56 /* Dirt Block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dirt Block.png"; sourceTree = "<group>"; };
+		D9A252620FC4B42B00FE9D56 /* Door Tall Closed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Door Tall Closed.png"; sourceTree = "<group>"; };
+		D9A252630FC4B42B00FE9D56 /* Door Tall Open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Door Tall Open.png"; sourceTree = "<group>"; };
+		D9A252640FC4B42B00FE9D56 /* Enemy Bug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Enemy Bug.png"; sourceTree = "<group>"; };
+		D9A252650FC4B42B00FE9D56 /* Gem Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gem Blue.png"; sourceTree = "<group>"; };
+		D9A252660FC4B42B00FE9D56 /* Gem Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gem Green.png"; sourceTree = "<group>"; };
+		D9A252670FC4B42B00FE9D56 /* Gem Orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gem Orange.png"; sourceTree = "<group>"; };
+		D9A252680FC4B42B00FE9D56 /* Grass Block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Grass Block.png"; sourceTree = "<group>"; };
+		D9A252690FC4B42B00FE9D56 /* Heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Heart.png; sourceTree = "<group>"; };
+		D9A2526A0FC4B42B00FE9D56 /* Key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Key.png; sourceTree = "<group>"; };
+		D9A2526B0FC4B42B00FE9D56 /* Plain Block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Plain Block.png"; sourceTree = "<group>"; };
+		D9A2526C0FC4B42B00FE9D56 /* PlanetCuteShadowMockup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PlanetCuteShadowMockup.jpg; sourceTree = "<group>"; };
+		D9A2526D0FC4B42B00FE9D56 /* PlanetCuteShadowTest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlanetCuteShadowTest.png; sourceTree = "<group>"; };
+		D9A2526E0FC4B42B00FE9D56 /* Ramp East.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ramp East.png"; sourceTree = "<group>"; };
+		D9A2526F0FC4B42B00FE9D56 /* Ramp North.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ramp North.png"; sourceTree = "<group>"; };
+		D9A252700FC4B42B00FE9D56 /* Ramp South.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ramp South.png"; sourceTree = "<group>"; };
+		D9A252710FC4B42B00FE9D56 /* Ramp West.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ramp West.png"; sourceTree = "<group>"; };
+		D9A252720FC4B42B00FE9D56 /* Rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rock.png; sourceTree = "<group>"; };
+		D9A252730FC4B42B00FE9D56 /* Roof East.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Roof East.png"; sourceTree = "<group>"; };
+		D9A252740FC4B42B00FE9D56 /* Roof North East.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Roof North East.png"; sourceTree = "<group>"; };
+		D9A252750FC4B42B00FE9D56 /* Roof North West.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Roof North West.png"; sourceTree = "<group>"; };
+		D9A252760FC4B42B00FE9D56 /* Roof North.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Roof North.png"; sourceTree = "<group>"; };
+		D9A252770FC4B42B00FE9D56 /* Roof South East.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Roof South East.png"; sourceTree = "<group>"; };
+		D9A252780FC4B42B00FE9D56 /* Roof South West.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Roof South West.png"; sourceTree = "<group>"; };
+		D9A252790FC4B42B00FE9D56 /* Roof South.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Roof South.png"; sourceTree = "<group>"; };
+		D9A2527A0FC4B42B00FE9D56 /* Roof West.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Roof West.png"; sourceTree = "<group>"; };
+		D9A2527B0FC4B42B00FE9D56 /* Selector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Selector.png; sourceTree = "<group>"; };
+		D9A2527C0FC4B42B00FE9D56 /* Shadow East.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shadow East.png"; sourceTree = "<group>"; };
+		D9A2527D0FC4B42B00FE9D56 /* Shadow North East.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shadow North East.png"; sourceTree = "<group>"; };
+		D9A2527E0FC4B42B00FE9D56 /* Shadow North West.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shadow North West.png"; sourceTree = "<group>"; };
+		D9A2527F0FC4B42B00FE9D56 /* Shadow North.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shadow North.png"; sourceTree = "<group>"; };
+		D9A252800FC4B42B00FE9D56 /* Shadow Side West.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shadow Side West.png"; sourceTree = "<group>"; };
+		D9A252810FC4B42B00FE9D56 /* Shadow South East.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shadow South East.png"; sourceTree = "<group>"; };
+		D9A252820FC4B42B00FE9D56 /* Shadow South West.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shadow South West.png"; sourceTree = "<group>"; };
+		D9A252830FC4B42B00FE9D56 /* Shadow South.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shadow South.png"; sourceTree = "<group>"; };
+		D9A252840FC4B42B00FE9D56 /* Shadow West.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shadow West.png"; sourceTree = "<group>"; };
+		D9A252850FC4B42B00FE9D56 /* SpeechBubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpeechBubble.png; sourceTree = "<group>"; };
+		D9A252860FC4B42B00FE9D56 /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star.png; sourceTree = "<group>"; };
+		D9A252870FC4B42B00FE9D56 /* Stone Block Tall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stone Block Tall.png"; sourceTree = "<group>"; };
+		D9A252880FC4B42B00FE9D56 /* Stone Block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stone Block.png"; sourceTree = "<group>"; };
+		D9A252890FC4B42B00FE9D56 /* Thumbs.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thumbs.db; sourceTree = "<group>"; };
+		D9A2528A0FC4B42B00FE9D56 /* Tree Short.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tree Short.png"; sourceTree = "<group>"; };
+		D9A2528B0FC4B42B00FE9D56 /* Tree Tall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tree Tall.png"; sourceTree = "<group>"; };
+		D9A2528C0FC4B42B00FE9D56 /* Tree Ugly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tree Ugly.png"; sourceTree = "<group>"; };
+		D9A2528D0FC4B42B00FE9D56 /* Wall Block Tall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wall Block Tall.png"; sourceTree = "<group>"; };
+		D9A2528E0FC4B42B00FE9D56 /* Wall Block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wall Block.png"; sourceTree = "<group>"; };
+		D9A2528F0FC4B42B00FE9D56 /* Water Block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Water Block.png"; sourceTree = "<group>"; };
+		D9A252900FC4B42B00FE9D56 /* Window Tall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Window Tall.png"; sourceTree = "<group>"; };
+		D9A252910FC4B42B00FE9D56 /* Wood Block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wood Block.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +359,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D9A252570FC4B42B00FE9D56 /* PlanetCute PNG */,
 				D942A63B0FC4B2EB0024211E /* fps_images.png */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 			);
@@ -378,6 +495,71 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		D9A252570FC4B42B00FE9D56 /* PlanetCute PNG */ = {
+			isa = PBXGroup;
+			children = (
+				D9A252580FC4B42B00FE9D56 /* Brown Block.png */,
+				D9A252590FC4B42B00FE9D56 /* Character Boy.png */,
+				D9A2525A0FC4B42B00FE9D56 /* Character Cat Girl.png */,
+				D9A2525B0FC4B42B00FE9D56 /* Character Horn Girl.png */,
+				D9A2525C0FC4B42B00FE9D56 /* Character Pink Girl.png */,
+				D9A2525D0FC4B42B00FE9D56 /* Character Princess Girl.png */,
+				D9A2525E0FC4B42B00FE9D56 /* Chest Closed.png */,
+				D9A2525F0FC4B42B00FE9D56 /* Chest Lid.png */,
+				D9A252600FC4B42B00FE9D56 /* Chest Open.png */,
+				D9A252610FC4B42B00FE9D56 /* Dirt Block.png */,
+				D9A252620FC4B42B00FE9D56 /* Door Tall Closed.png */,
+				D9A252630FC4B42B00FE9D56 /* Door Tall Open.png */,
+				D9A252640FC4B42B00FE9D56 /* Enemy Bug.png */,
+				D9A252650FC4B42B00FE9D56 /* Gem Blue.png */,
+				D9A252660FC4B42B00FE9D56 /* Gem Green.png */,
+				D9A252670FC4B42B00FE9D56 /* Gem Orange.png */,
+				D9A252680FC4B42B00FE9D56 /* Grass Block.png */,
+				D9A252690FC4B42B00FE9D56 /* Heart.png */,
+				D9A2526A0FC4B42B00FE9D56 /* Key.png */,
+				D9A2526B0FC4B42B00FE9D56 /* Plain Block.png */,
+				D9A2526C0FC4B42B00FE9D56 /* PlanetCuteShadowMockup.jpg */,
+				D9A2526D0FC4B42B00FE9D56 /* PlanetCuteShadowTest.png */,
+				D9A2526E0FC4B42B00FE9D56 /* Ramp East.png */,
+				D9A2526F0FC4B42B00FE9D56 /* Ramp North.png */,
+				D9A252700FC4B42B00FE9D56 /* Ramp South.png */,
+				D9A252710FC4B42B00FE9D56 /* Ramp West.png */,
+				D9A252720FC4B42B00FE9D56 /* Rock.png */,
+				D9A252730FC4B42B00FE9D56 /* Roof East.png */,
+				D9A252740FC4B42B00FE9D56 /* Roof North East.png */,
+				D9A252750FC4B42B00FE9D56 /* Roof North West.png */,
+				D9A252760FC4B42B00FE9D56 /* Roof North.png */,
+				D9A252770FC4B42B00FE9D56 /* Roof South East.png */,
+				D9A252780FC4B42B00FE9D56 /* Roof South West.png */,
+				D9A252790FC4B42B00FE9D56 /* Roof South.png */,
+				D9A2527A0FC4B42B00FE9D56 /* Roof West.png */,
+				D9A2527B0FC4B42B00FE9D56 /* Selector.png */,
+				D9A2527C0FC4B42B00FE9D56 /* Shadow East.png */,
+				D9A2527D0FC4B42B00FE9D56 /* Shadow North East.png */,
+				D9A2527E0FC4B42B00FE9D56 /* Shadow North West.png */,
+				D9A2527F0FC4B42B00FE9D56 /* Shadow North.png */,
+				D9A252800FC4B42B00FE9D56 /* Shadow Side West.png */,
+				D9A252810FC4B42B00FE9D56 /* Shadow South East.png */,
+				D9A252820FC4B42B00FE9D56 /* Shadow South West.png */,
+				D9A252830FC4B42B00FE9D56 /* Shadow South.png */,
+				D9A252840FC4B42B00FE9D56 /* Shadow West.png */,
+				D9A252850FC4B42B00FE9D56 /* SpeechBubble.png */,
+				D9A252860FC4B42B00FE9D56 /* Star.png */,
+				D9A252870FC4B42B00FE9D56 /* Stone Block Tall.png */,
+				D9A252880FC4B42B00FE9D56 /* Stone Block.png */,
+				D9A252890FC4B42B00FE9D56 /* Thumbs.db */,
+				D9A2528A0FC4B42B00FE9D56 /* Tree Short.png */,
+				D9A2528B0FC4B42B00FE9D56 /* Tree Tall.png */,
+				D9A2528C0FC4B42B00FE9D56 /* Tree Ugly.png */,
+				D9A2528D0FC4B42B00FE9D56 /* Wall Block Tall.png */,
+				D9A2528E0FC4B42B00FE9D56 /* Wall Block.png */,
+				D9A2528F0FC4B42B00FE9D56 /* Water Block.png */,
+				D9A252900FC4B42B00FE9D56 /* Window Tall.png */,
+				D9A252910FC4B42B00FE9D56 /* Wood Block.png */,
+			);
+			path = "PlanetCute PNG";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -422,6 +604,64 @@
 			files = (
 				6E6E112F0FC0AD8E00E5CA7B /* README.txt in Resources */,
 				D942A63C0FC4B2EB0024211E /* fps_images.png in Resources */,
+				D9A252920FC4B42B00FE9D56 /* Brown Block.png in Resources */,
+				D9A252930FC4B42B00FE9D56 /* Character Boy.png in Resources */,
+				D9A252940FC4B42B00FE9D56 /* Character Cat Girl.png in Resources */,
+				D9A252950FC4B42B00FE9D56 /* Character Horn Girl.png in Resources */,
+				D9A252960FC4B42B00FE9D56 /* Character Pink Girl.png in Resources */,
+				D9A252970FC4B42B00FE9D56 /* Character Princess Girl.png in Resources */,
+				D9A252980FC4B42B00FE9D56 /* Chest Closed.png in Resources */,
+				D9A252990FC4B42B00FE9D56 /* Chest Lid.png in Resources */,
+				D9A2529A0FC4B42B00FE9D56 /* Chest Open.png in Resources */,
+				D9A2529B0FC4B42B00FE9D56 /* Dirt Block.png in Resources */,
+				D9A2529C0FC4B42B00FE9D56 /* Door Tall Closed.png in Resources */,
+				D9A2529D0FC4B42B00FE9D56 /* Door Tall Open.png in Resources */,
+				D9A2529E0FC4B42B00FE9D56 /* Enemy Bug.png in Resources */,
+				D9A2529F0FC4B42B00FE9D56 /* Gem Blue.png in Resources */,
+				D9A252A00FC4B42B00FE9D56 /* Gem Green.png in Resources */,
+				D9A252A10FC4B42B00FE9D56 /* Gem Orange.png in Resources */,
+				D9A252A20FC4B42B00FE9D56 /* Grass Block.png in Resources */,
+				D9A252A30FC4B42B00FE9D56 /* Heart.png in Resources */,
+				D9A252A40FC4B42B00FE9D56 /* Key.png in Resources */,
+				D9A252A50FC4B42B00FE9D56 /* Plain Block.png in Resources */,
+				D9A252A60FC4B42B00FE9D56 /* PlanetCuteShadowMockup.jpg in Resources */,
+				D9A252A70FC4B42B00FE9D56 /* PlanetCuteShadowTest.png in Resources */,
+				D9A252A80FC4B42B00FE9D56 /* Ramp East.png in Resources */,
+				D9A252A90FC4B42B00FE9D56 /* Ramp North.png in Resources */,
+				D9A252AA0FC4B42B00FE9D56 /* Ramp South.png in Resources */,
+				D9A252AB0FC4B42B00FE9D56 /* Ramp West.png in Resources */,
+				D9A252AC0FC4B42B00FE9D56 /* Rock.png in Resources */,
+				D9A252AD0FC4B42B00FE9D56 /* Roof East.png in Resources */,
+				D9A252AE0FC4B42B00FE9D56 /* Roof North East.png in Resources */,
+				D9A252AF0FC4B42B00FE9D56 /* Roof North West.png in Resources */,
+				D9A252B00FC4B42B00FE9D56 /* Roof North.png in Resources */,
+				D9A252B10FC4B42B00FE9D56 /* Roof South East.png in Resources */,
+				D9A252B20FC4B42B00FE9D56 /* Roof South West.png in Resources */,
+				D9A252B30FC4B42B00FE9D56 /* Roof South.png in Resources */,
+				D9A252B40FC4B42B00FE9D56 /* Roof West.png in Resources */,
+				D9A252B50FC4B42B00FE9D56 /* Selector.png in Resources */,
+				D9A252B60FC4B42B00FE9D56 /* Shadow East.png in Resources */,
+				D9A252B70FC4B42B00FE9D56 /* Shadow North East.png in Resources */,
+				D9A252B80FC4B42B00FE9D56 /* Shadow North West.png in Resources */,
+				D9A252B90FC4B42B00FE9D56 /* Shadow North.png in Resources */,
+				D9A252BA0FC4B42B00FE9D56 /* Shadow Side West.png in Resources */,
+				D9A252BB0FC4B42B00FE9D56 /* Shadow South East.png in Resources */,
+				D9A252BC0FC4B42B00FE9D56 /* Shadow South West.png in Resources */,
+				D9A252BD0FC4B42B00FE9D56 /* Shadow South.png in Resources */,
+				D9A252BE0FC4B42B00FE9D56 /* Shadow West.png in Resources */,
+				D9A252BF0FC4B42B00FE9D56 /* SpeechBubble.png in Resources */,
+				D9A252C00FC4B42B00FE9D56 /* Star.png in Resources */,
+				D9A252C10FC4B42B00FE9D56 /* Stone Block Tall.png in Resources */,
+				D9A252C20FC4B42B00FE9D56 /* Stone Block.png in Resources */,
+				D9A252C30FC4B42B00FE9D56 /* Thumbs.db in Resources */,
+				D9A252C40FC4B42B00FE9D56 /* Tree Short.png in Resources */,
+				D9A252C50FC4B42B00FE9D56 /* Tree Tall.png in Resources */,
+				D9A252C60FC4B42B00FE9D56 /* Tree Ugly.png in Resources */,
+				D9A252C70FC4B42B00FE9D56 /* Wall Block Tall.png in Resources */,
+				D9A252C80FC4B42B00FE9D56 /* Wall Block.png in Resources */,
+				D9A252C90FC4B42B00FE9D56 /* Water Block.png in Resources */,
+				D9A252CA0FC4B42B00FE9D56 /* Window Tall.png in Resources */,
+				D9A252CB0FC4B42B00FE9D56 /* Wood Block.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
