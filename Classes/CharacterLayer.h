@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "cocos2d.h"
+#import "chipmunk.h"
 #import "Layer.h"
 #import "Player.h"
 
 @interface CharacterLayer : Layer {
     Player *player;
+	cpSpace *space;
 }
 
 @end

@@ -15,7 +15,7 @@
 {
     self = [super init];
     if (self != nil) {
-        NSLog(@"O HAI");
+//        NSLog(@"O HAI");
         NSString *kind = @"Wood";
         [self initWithFile:[NSString stringWithFormat:@"%@ Block.png", kind]];
         self.anchorPoint = ccp(0,0);

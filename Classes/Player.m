@@ -10,12 +10,14 @@
 #import "cocos2d.h"
 
 @implementation Player
+@synthesize body;
+
 - (id) init
 {
     self = [super init];
     if (self != nil) {
         [self initWithFile:@"Character Princess Girl.png"];
-        [self schedule:@selector(bounce:) interval: 2];
+        // [self schedule:@selector(bounce:) interval: 2];
     }
     return self;
 }

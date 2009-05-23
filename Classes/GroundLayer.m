@@ -16,7 +16,7 @@
     if(self != nil) {
         for(int i = 3 ; i>=0 ; i--) {
             for(int j = 2; j>=0 ; j--) {
-                NSLog(@"KTHXBYE");
+                //NSLog(@"KTHXBYE");
                 Block *block = [Block node];
                 block.position = ccp(i * 100, j * 100);
                 [self addChild:block];

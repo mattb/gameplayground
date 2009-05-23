@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "cocos2d.h"
+#import "chipmunk.h"
 #import "Sprite.h"
 
 @interface Player : Sprite {
-
+    cpBody *body;
 }
+
+@property (nonatomic) cpBody *body;
 
 @end
