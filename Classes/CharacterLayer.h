@@ -15,6 +15,8 @@
 @interface CharacterLayer : Layer {
     Player *player;
 	cpSpace *space;
+    NSTimeInterval lastTouch;
+    CGPoint firstTouchPoint;
 }
 
 @end

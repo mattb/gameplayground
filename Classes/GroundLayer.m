@@ -14,7 +14,7 @@
 - (id) init {
     self = [super init];
     if(self != nil) {
-        for(int i = 3 ; i>=0 ; i--) {
+        for(int i = 4 ; i>=0 ; i--) {
             for(int j = 2; j>=0 ; j--) {
                 //NSLog(@"KTHXBYE");
                 Block *block = [Block node];

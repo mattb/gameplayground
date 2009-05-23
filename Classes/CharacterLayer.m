@@ -63,7 +63,7 @@ eachShape(void *ptr, void* unused)
         shape->e = 1.0f; shape->u = 1.0f;
         cpSpaceAddStaticShape(space, shape); 
         
-        cpBody *body = cpBodyNew(1.0f, 1.0f);
+        cpBody *body = cpBodyNew(10.0f, 10.0f);
         body->p = player.position;
         player.body = body;
         
@@ -99,19 +99,23 @@ eachShape(void *ptr, void* unused)
 - (BOOL) ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *) event
 {
 	UITouch *touch = [touches anyObject];
-	CGPoint point = [touch locationInView: [touch view]];
+	firstTouchPoint = [touch locationInView: [touch view]];
 	
-    player.position = ccp(point.y, point.x);
-    
+    cpBodyResetForces(player.body);
+    player.body->v = cpvzero;
+    player.body->f = cpvzero;
+    player.body->w = 0.0f;
+    cpBodySetAngle(player.body, 0.0f);
+    player.body->p = cpv(firstTouchPoint.y, firstTouchPoint.x);
+    NSLog(@"RESET");
 	return YES;
 }
 
 - (BOOL) ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *) event
 {
 	UITouch *touch = [touches anyObject];
-	CGPoint point = [touch locationInView: [touch view]];
-    player.position = ccp(point.y, point.x);
-    NSLog(@"%f %f", point.x, point.y);
+
+    lastTouch = [touch timestamp];
 	return YES;
 }
 
@@ -119,8 +123,13 @@ eachShape(void *ptr, void* unused)
 {
 	UITouch *touch = [touches anyObject];
 	CGPoint point = [touch locationInView: [touch view]];
+    CGPoint oldpoint = [touch previousLocationInView: [touch view]];
+    //NSLog(@"From (%f %f) to (%f %f)", oldpoint.x, oldpoint.y, point.x, point.y);
     //player.position = ccp(point.y, point.x);
-    cpBodyApplyForce(player.body, cpvforangle(1.0f), cpvzero);
+    // cpBodyApplyForce(player.body, cpvforangle(1.0f), cpvzero);
+
+    cpVect direction = cpv(point.y - firstTouchPoint.y, point.x - firstTouchPoint.x);
+    cpBodyApplyImpulse(player.body, cpvmult(direction, 25.0f), cpvzero);
     
 	return YES;
 }
