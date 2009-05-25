@@ -12,6 +12,7 @@
 #import "Layer.h"
 #import "Player.h"
 #import "CameraZoomAction.h"
+#import "Obstacle.h"
 
 @interface CharacterLayer : Layer {
     Player *player;

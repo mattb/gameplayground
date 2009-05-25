@@ -26,9 +26,6 @@ eachShape(void *ptr, void* unused)
     self = [super init];
     if(self != nil) {
 		self.isTouchEnabled = YES;
-        player = [Player node];
-        player.position = ccp(120,120);
-        [self addChild:player];
                 
         CGSize wins = [[Director sharedDirector] winSize];
         cpInitChipmunk();
@@ -63,17 +60,35 @@ eachShape(void *ptr, void* unused)
         shape->e = 1.0f; shape->u = 1.0f;
         cpSpaceAddStaticShape(space, shape); 
         
+        player = [Player node];
+        player.position = ccp(120,120);
+        [self addChild:player];
+        
         cpBody *body = cpBodyNew(10.0f, 10.0f);
         body->p = player.position;
         player.body = body;
         
         cpSpaceAddBody(space, body);
-        
-        cpShape *playerShape = cpCircleShapeNew(body, 50.0f, CGPointZero);
+
+        cpShape *playerShape = cpCircleShapeNew(body, 40.0f, CGPointZero);
         playerShape->e = 0.5f; 
         playerShape->u = 0.5f;
         playerShape->data = player;
-        cpSpaceAddShape(space, playerShape);        
+        cpSpaceAddShape(space, playerShape);    
+
+        for(int i = 0; i<6; i++) {
+            Obstacle *rock = [Obstacle node];
+            rock.scale = 0.5f;
+            rock.position = ccp(rand() % 400,rand() % 400);
+            [self addChild:rock];
+
+            cpBody *rockbody = cpBodyNew(INFINITY, INFINITY);
+            rockbody->p = rock.position;
+        
+            cpShape *rockShape = cpCircleShapeNew(rockbody, 22.0f, CGPointZero);
+            rockShape->e = 1.0f; rockShape->u = 1.0f;
+            cpSpaceAddStaticShape(space, rockShape);
+        }
         
         [self schedule: @selector(step:)];
     }

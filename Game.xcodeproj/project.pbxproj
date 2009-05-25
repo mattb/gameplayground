@@ -224,6 +224,7 @@
 		D92123A60FC852060078D790 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = D92123970FC852060078D790 /* CMakeLists.txt */; };
 		D92123A70FC852060078D790 /* chipmunk.c in Sources */ = {isa = PBXBuildFile; fileRef = D92123990FC852060078D790 /* chipmunk.c */; };
 		D93091A60FCB273D00A3FE2C /* MenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D93091A50FCB273D00A3FE2C /* MenuScene.m */; };
+		D930920E0FCB40D300A3FE2C /* Obstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = D930920D0FCB40D300A3FE2C /* Obstacle.m */; };
 		D942A60B0FC4B2E20024211E /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = D942A5A50FC4B2E20024211E /* Action.m */; };
 		D942A60C0FC4B2E20024211E /* AtlasNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D942A5A70FC4B2E20024211E /* AtlasNode.m */; };
 		D942A60D0FC4B2E20024211E /* AtlasSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = D942A5A90FC4B2E20024211E /* AtlasSprite.m */; };
@@ -577,6 +578,8 @@
 		D92123990FC852060078D790 /* chipmunk.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = chipmunk.c; sourceTree = "<group>"; };
 		D93091A40FCB273D00A3FE2C /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScene.h; sourceTree = "<group>"; };
 		D93091A50FCB273D00A3FE2C /* MenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScene.m; sourceTree = "<group>"; };
+		D930920C0FCB40D300A3FE2C /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obstacle.h; sourceTree = "<group>"; };
+		D930920D0FCB40D300A3FE2C /* Obstacle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Obstacle.m; sourceTree = "<group>"; };
 		D942A5A40FC4B2E20024211E /* Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Action.h; sourceTree = "<group>"; };
 		D942A5A50FC4B2E20024211E /* Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Action.m; sourceTree = "<group>"; };
 		D942A5A60FC4B2E20024211E /* AtlasNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtlasNode.h; sourceTree = "<group>"; };
@@ -1271,6 +1274,8 @@
 				D9A253CF0FC4BF3300FE9D56 /* Player.m */,
 				D92112EF0FCAD5430053EA0E /* VideoSprite.h */,
 				D92112F00FCAD5430053EA0E /* VideoSprite.m */,
+				D930920C0FCB40D300A3FE2C /* Obstacle.h */,
+				D930920D0FCB40D300A3FE2C /* Obstacle.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -1662,6 +1667,7 @@
 				D92112F10FCAD5430053EA0E /* VideoSprite.m in Sources */,
 				D921173F0FCAF2730053EA0E /* CameraZoomAction.m in Sources */,
 				D93091A60FCB273D00A3FE2C /* MenuScene.m in Sources */,
+				D930920E0FCB40D300A3FE2C /* Obstacle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
