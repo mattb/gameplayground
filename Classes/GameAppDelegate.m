@@ -10,7 +10,7 @@
 
 // import cocos2d classes you'll need:
 #import "cocos2d.h"
-#import "MainScene.h"
+#import "MenuScene.h"
 
 @implementation GameAppDelegate
 
@@ -28,7 +28,7 @@
 	
     [window makeKeyAndVisible];	
 	
-    MainScene *scene = [MainScene node];
+    Scene *scene = [MenuScene node];
     [[Director sharedDirector] runWithScene:scene];
 }
 
