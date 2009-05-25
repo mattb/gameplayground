@@ -16,3 +16,6 @@ These were made by extracting frames as jpegs from an MP4 video using mplayer, c
 
 5. Added a "Camera Zoom Action" that linearly zooms in the camera on a scene over a duration. Use this to zoom in the viewport while a touch is held down.
 http://github.com/mattb/gameplayground/tree/9ed6017b47b9b1d87bd5a6cb99f59c549cbd68f5
+
+6. Moved the MainScene behind a MenuScene so I can have more than one experiment in this app.
+http://github.com/mattb/gameplayground/tree/204963f402625424da2de40d73b7a5960de41ebc
