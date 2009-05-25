@@ -9,6 +9,7 @@
 #import "GroundLayer.h"
 #import "Block.h"
 #import "cocos2d.h"
+#import "VideoSprite.h"
 
 @implementation GroundLayer
 - (id) init {
@@ -22,6 +23,9 @@
                 [self addChild:block];
             }
         }
+        VideoSprite *video = [VideoSprite node];
+        video.position = ccp(200,150);
+        [self addChild:video];
     }
     return self;
 }    
