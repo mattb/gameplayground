@@ -19,3 +19,7 @@ http://github.com/mattb/gameplayground/tree/9ed6017b47b9b1d87bd5a6cb99f59c549cbd
 
 6. Moved the MainScene behind a MenuScene so I can have more than one experiment in this app.
 http://github.com/mattb/gameplayground/tree/204963f402625424da2de40d73b7a5960de41ebc
+
+7. Add some Rock obstacles to bounce off.
+http://github.com/mattb/gameplayground/tree/3258629988f93ccfaa92686f5469c15130c94b47
+These are infinite mass/moment objects fixed in the game world.
