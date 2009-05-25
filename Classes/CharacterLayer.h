@@ -11,6 +11,7 @@
 #import "chipmunk.h"
 #import "Layer.h"
 #import "Player.h"
+#import "CameraZoomAction.h"
 
 @interface CharacterLayer : Layer {
     Player *player;

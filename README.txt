@@ -11,3 +11,5 @@ Progress video: http://flic.kr/p/6qm3e5
 
 4. Made a "video sprite" that uses a 30fps animation loaded from a series of PVR-compressed image frames.
 These were made by extracting frames as jpegs from an MP4 video using mplayer, cropping them to be 128x128 (PVR images must be square and their size a power of two), and converting to PVR format with a command like: /Developer3/Platforms/iPhoneOS.platform/Developer/usr/bin/texturetool -e PVRTC -o frame1.pvr -f PVR frame1.jpg
+
+5. Added a "Camera Zoom Action" that linearly zooms in the camera on a scene over a duration. Use this to zoom in the viewport while a touch is held down.

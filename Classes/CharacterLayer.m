@@ -99,15 +99,19 @@ eachShape(void *ptr, void* unused)
 - (BOOL) ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *) event
 {
 	UITouch *touch = [touches anyObject];
-	firstTouchPoint = [touch locationInView: [touch view]];
-	
+	firstTouchPoint = [touch locationInView: [touch view]];	
+
     cpBodyResetForces(player.body);
     player.body->v = cpvzero;
     player.body->f = cpvzero;
     player.body->w = 0.0f;
     cpBodySetAngle(player.body, 0.0f);
     player.body->p = cpv(firstTouchPoint.y, firstTouchPoint.x);
-    NSLog(@"RESET");
+    Scene *scene = (Scene *)[self parent];
+
+    Action *action = [CameraZoomAction actionWithDuration:0.15f x:firstTouchPoint.y - 70.0f y:firstTouchPoint.x + 50.0f z:250.0f];
+    [scene runAction:action];
+    
 	return YES;
 }
 
@@ -121,12 +125,12 @@ eachShape(void *ptr, void* unused)
 
 - (BOOL) ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *) event
 {
+    Scene *scene = (Scene *)[self parent];
+    [scene stopAllActions];
+    [scene.camera restore];
+
 	UITouch *touch = [touches anyObject];
 	CGPoint point = [touch locationInView: [touch view]];
-    CGPoint oldpoint = [touch previousLocationInView: [touch view]];
-    //NSLog(@"From (%f %f) to (%f %f)", oldpoint.x, oldpoint.y, point.x, point.y);
-    //player.position = ccp(point.y, point.x);
-    // cpBodyApplyForce(player.body, cpvforangle(1.0f), cpvzero);
 
     cpVect direction = cpv(point.y - firstTouchPoint.y, point.x - firstTouchPoint.x);
     cpBodyApplyImpulse(player.body, cpvmult(direction, 25.0f), cpvzero);

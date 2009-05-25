@@ -208,6 +208,7 @@
 		D92116670FCADB600053EA0E /* 00000111.jpg-0.png.pvr in Resources */ = {isa = PBXBuildFile; fileRef = D92115A70FCADB600053EA0E /* 00000111.jpg-0.png.pvr */; };
 		D92116680FCADB600053EA0E /* 00000110.jpg-0.png.pvr in Resources */ = {isa = PBXBuildFile; fileRef = D92115A80FCADB600053EA0E /* 00000110.jpg-0.png.pvr */; };
 		D92116690FCADB600053EA0E /* 00000109.jpg-0.png.pvr in Resources */ = {isa = PBXBuildFile; fileRef = D92115A90FCADB600053EA0E /* 00000109.jpg-0.png.pvr */; };
+		D921173F0FCAF2730053EA0E /* CameraZoomAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D921173E0FCAF2730053EA0E /* CameraZoomAction.m */; };
 		D921239A0FC852060078D790 /* cpVect.c in Sources */ = {isa = PBXBuildFile; fileRef = D92123800FC852060078D790 /* cpVect.c */; };
 		D921239B0FC852060078D790 /* cpSpaceHash.c in Sources */ = {isa = PBXBuildFile; fileRef = D92123820FC852060078D790 /* cpSpaceHash.c */; };
 		D921239C0FC852060078D790 /* cpSpace.c in Sources */ = {isa = PBXBuildFile; fileRef = D92123840FC852060078D790 /* cpSpace.c */; };
@@ -543,6 +544,8 @@
 		D92115A70FCADB600053EA0E /* 00000111.jpg-0.png.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; path = "00000111.jpg-0.png.pvr"; sourceTree = "<group>"; };
 		D92115A80FCADB600053EA0E /* 00000110.jpg-0.png.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; path = "00000110.jpg-0.png.pvr"; sourceTree = "<group>"; };
 		D92115A90FCADB600053EA0E /* 00000109.jpg-0.png.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; path = "00000109.jpg-0.png.pvr"; sourceTree = "<group>"; };
+		D921173D0FCAF2730053EA0E /* CameraZoomAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraZoomAction.h; sourceTree = "<group>"; };
+		D921173E0FCAF2730053EA0E /* CameraZoomAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraZoomAction.m; sourceTree = "<group>"; };
 		D921237E0FC852060078D790 /* prime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prime.h; sourceTree = "<group>"; };
 		D921237F0FC852060078D790 /* cpVect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpVect.h; sourceTree = "<group>"; };
 		D92123800FC852060078D790 /* cpVect.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpVect.c; sourceTree = "<group>"; };
@@ -763,6 +766,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D921173C0FCAF2690053EA0E /* Actions */,
 				D9A252D10FC4B4EB00FE9D56 /* Layers */,
 				D9A252D00FC4B4E500FE9D56 /* Sprites */,
 				D9A252CF0FC4B4E000FE9D56 /* Scenes */,
@@ -1023,6 +1027,15 @@
 				D92115A90FCADB600053EA0E /* 00000109.jpg-0.png.pvr */,
 			);
 			path = videoframes;
+			sourceTree = "<group>";
+		};
+		D921173C0FCAF2690053EA0E /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				D921173D0FCAF2730053EA0E /* CameraZoomAction.h */,
+				D921173E0FCAF2730053EA0E /* CameraZoomAction.m */,
+			);
+			name = Actions;
 			sourceTree = "<group>";
 		};
 		D942A5A30FC4B2E20024211E /* cocos2d */ = {
@@ -1642,6 +1655,7 @@
 				D92123A50FC852060078D790 /* cpArbiter.c in Sources */,
 				D92123A70FC852060078D790 /* chipmunk.c in Sources */,
 				D92112F10FCAD5430053EA0E /* VideoSprite.m in Sources */,
+				D921173F0FCAF2730053EA0E /* CameraZoomAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

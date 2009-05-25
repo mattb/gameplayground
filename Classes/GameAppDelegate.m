@@ -24,6 +24,7 @@
   
     [[Director sharedDirector] setDeviceOrientation:CCDeviceOrientationLandscapeLeft];
     [[Director sharedDirector] attachInWindow:window];
+    [[Director sharedDirector] setDisplayFPS:YES];
 	
     [window makeKeyAndVisible];	
 	
