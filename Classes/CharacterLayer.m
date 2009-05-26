@@ -8,14 +8,24 @@
 
 #import "CharacterLayer.h"
 
+enum {
+	kTagPlayerEmitter,
+};
+
 static void
-eachShape(void *ptr, void* unused)
+eachShape(void *ptr, void* data)
 {
+    CharacterLayer *layer = (CharacterLayer *)data;
 	cpShape *shape = (cpShape*) ptr;
 	Sprite *sprite = shape->data;
     if(sprite) {
 		cpBody *body = shape->body;
-        [sprite setPosition: body->p];
+
+        if(sprite == layer.player) {
+            [layer setPlayerPosition: body->p];
+        } else {
+            [sprite setPosition: body->p];
+        }
 		
 		[sprite setRotation: (float) CC_RADIANS_TO_DEGREES( -body->a )];
     }
@@ -23,19 +33,22 @@ eachShape(void *ptr, void* unused)
 
 static int
 playerHitsWall(cpShape *a, cpShape *b, cpContact *contacts, int numContacts, cpFloat normal_coef, void *data) {
-    CDSoundEngine *engine = (CDSoundEngine *)data;
-    [engine playSound:1 channelGroupId:0 pitch:0.7f pan:0.0 gain:1.0 loop:NO];
+    CharacterLayer *layer = (CharacterLayer *)data;
+    [layer.soundEngine playSound:1 channelGroupId:0 pitch:0.7f pan:0.0 gain:1.0 loop:NO];
     return 1;
 }
 
 static int
 playerHitsRock(cpShape *a, cpShape *b, cpContact *contacts, int numContacts, cpFloat normal_coef, void *data) {
-    CDSoundEngine *engine = (CDSoundEngine *)data;
-    [engine playSound:0 channelGroupId:0 pitch:1.3f pan:0.0 gain:1.0 loop:NO];
+    CharacterLayer *layer = (CharacterLayer *)data;
+    [layer.soundEngine playSound:0 channelGroupId:0 pitch:1.3f pan:0.0 gain:1.0 loop:NO];
+    
     return 1;
 }
 
 @implementation CharacterLayer
+@synthesize soundEngine,player;
+
 -(void) setUpSoundEngine {
     
 	int channelGroupCount = 1;
@@ -45,6 +58,12 @@ playerHitsRock(cpShape *a, cpShape *b, cpContact *contacts, int numContacts, cpF
 	soundEngine = [[CDSoundEngine alloc] init:channelGroups channelGroupTotal:channelGroupCount audioSessionCategory:kAudioSessionCategory_AmbientSound];
     [soundEngine loadBuffer:0 fileName:@"slap" fileType:@"wav"];
 	[soundEngine loadBuffer:1 fileName:@"gloop" fileType:@"wav"];
+}
+
+-(void) setPlayerPosition:(CGPoint)position {
+    [player setPosition:position];
+    ParticleSystem *s = (ParticleSystem*) [self getChildByTag:kTagPlayerEmitter];
+    [s setPosition:position];
 }
 
 - (id) init {
@@ -92,6 +111,13 @@ playerHitsRock(cpShape *a, cpShape *b, cpContact *contacts, int numContacts, cpF
         
         player = [Player node];
         player.position = ccp(200,120);
+        
+        ParticleSystem *emitter = [ParticleFlower node];
+        emitter.texture = [[TextureMgr sharedTextureMgr] addImage: @"fire.pvr"];
+        emitter.life = 1;
+        emitter.position = player.position;
+        
+        [self addChild: emitter z:0 tag:kTagPlayerEmitter];
         [self addChild:player];
         
         cpBody *body = cpBodyNew(10.0f, 10.0f);
@@ -123,8 +149,8 @@ playerHitsRock(cpShape *a, cpShape *b, cpContact *contacts, int numContacts, cpF
             cpSpaceAddStaticShape(space, rockShape);
         }
         
-        cpSpaceAddCollisionPairFunc(space, 1, 2, &playerHitsRock, soundEngine);
-        cpSpaceAddCollisionPairFunc(space, 1, 0, &playerHitsWall, soundEngine);
+        cpSpaceAddCollisionPairFunc(space, 1, 2, &playerHitsRock, self);
+        cpSpaceAddCollisionPairFunc(space, 1, 0, &playerHitsWall, self);
         
         [self schedule: @selector(step:)];
     }
@@ -139,8 +165,8 @@ playerHitsRock(cpShape *a, cpShape *b, cpContact *contacts, int numContacts, cpF
 	for(int i=0; i<steps; i++){
 		cpSpaceStep(space, dt);
 	}
-	cpSpaceHashEach(space->activeShapes, &eachShape, nil);
-	cpSpaceHashEach(space->staticShapes, &eachShape, nil);
+	cpSpaceHashEach(space->activeShapes, &eachShape, self);
+	cpSpaceHashEach(space->staticShapes, &eachShape, self);
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////

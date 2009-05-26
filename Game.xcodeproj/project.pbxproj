@@ -228,6 +228,8 @@
 		D92338EB0FCC78A30081F9E3 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D92338EA0FCC78A30081F9E3 /* OpenAL.framework */; };
 		D923395D0FCC7C120081F9E3 /* gloop.wav in Resources */ = {isa = PBXBuildFile; fileRef = D923395B0FCC7C120081F9E3 /* gloop.wav */; };
 		D923395E0FCC7C120081F9E3 /* slap.wav in Resources */ = {isa = PBXBuildFile; fileRef = D923395C0FCC7C120081F9E3 /* slap.wav */; };
+		D92339D10FCC9C9D0081F9E3 /* fire.pvr in Resources */ = {isa = PBXBuildFile; fileRef = D92339D00FCC9C9D0081F9E3 /* fire.pvr */; };
+		D92339D70FCC9CB90081F9E3 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = D92339D60FCC9CB90081F9E3 /* fire.png */; };
 		D93091A60FCB273D00A3FE2C /* MenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D93091A50FCB273D00A3FE2C /* MenuScene.m */; };
 		D930920E0FCB40D300A3FE2C /* Obstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = D930920D0FCB40D300A3FE2C /* Obstacle.m */; };
 		D942A60B0FC4B2E20024211E /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = D942A5A50FC4B2E20024211E /* Action.m */; };
@@ -588,6 +590,8 @@
 		D92338EA0FCC78A30081F9E3 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D923395B0FCC7C120081F9E3 /* gloop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gloop.wav; sourceTree = "<group>"; };
 		D923395C0FCC7C120081F9E3 /* slap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = slap.wav; sourceTree = "<group>"; };
+		D92339D00FCC9C9D0081F9E3 /* fire.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire.pvr; sourceTree = "<group>"; };
+		D92339D60FCC9CB90081F9E3 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
 		D93091A40FCB273D00A3FE2C /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScene.h; sourceTree = "<group>"; };
 		D93091A50FCB273D00A3FE2C /* MenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScene.m; sourceTree = "<group>"; };
 		D930920C0FCB40D300A3FE2C /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obstacle.h; sourceTree = "<group>"; };
@@ -833,6 +837,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D92339D60FCC9CB90081F9E3 /* fire.png */,
+				D92339D00FCC9C9D0081F9E3 /* fire.pvr */,
 				D92339240FCC7A3E0081F9E3 /* Sounds */,
 				D92113220FCAD8740053EA0E /* videoframes */,
 				D9A252570FC4B42B00FE9D56 /* PlanetCute PNG */,
@@ -1625,6 +1631,8 @@
 				D92116690FCADB600053EA0E /* 00000109.jpg-0.png.pvr in Resources */,
 				D923395D0FCC7C120081F9E3 /* gloop.wav in Resources */,
 				D923395E0FCC7C120081F9E3 /* slap.wav in Resources */,
+				D92339D10FCC9C9D0081F9E3 /* fire.pvr in Resources */,
+				D92339D70FCC9CB90081F9E3 /* fire.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

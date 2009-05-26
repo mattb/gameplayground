@@ -22,5 +22,9 @@
     NSTimeInterval lastTouch;
     CGPoint firstTouchPoint;
 }
+-(void) setPlayerPosition:(CGPoint)position;
+
+@property (readonly) CDSoundEngine *soundEngine;
+@property (readonly) Player *player;
 
 @end
