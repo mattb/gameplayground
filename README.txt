@@ -24,3 +24,8 @@ http://github.com/mattb/gameplayground/tree/204963f402625424da2de40d73b7a5960de4
 http://github.com/mattb/gameplayground/tree/3258629988f93ccfaa92686f5469c15130c94b47
 These are infinite mass/moment objects fixed in the game world.
 Progress video: http://flic.kr/p/6qW8ke
+
+8. Add sound support using CocosDenshion. 
+http://github.com/mattb/gameplayground/tree/b6e70835be399d4e78bcfbebeb1eaeccbb9253cd
+from http://groups.google.com/group/cocos2d-iphone-discuss/files
+Tie sounds into collision callbacks in physics engine - one sound for player versus rock, one for player versus wall.
