@@ -29,3 +29,4 @@ Progress video: http://flic.kr/p/6qW8ke
 http://github.com/mattb/gameplayground/tree/b6e70835be399d4e78bcfbebeb1eaeccbb9253cd
 from http://groups.google.com/group/cocos2d-iphone-discuss/files
 Tie sounds into collision callbacks in physics engine - one sound for player versus rock, one for player versus wall.
+Sounds taken from http://www.freesound.org/packsViewSingle.php?id=1497
