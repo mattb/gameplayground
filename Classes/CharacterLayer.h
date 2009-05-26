@@ -13,8 +13,10 @@
 #import "Player.h"
 #import "CameraZoomAction.h"
 #import "Obstacle.h"
+#import "CocosDenshion.h"
 
 @interface CharacterLayer : Layer {
+	CDSoundEngine *soundEngine;
     Player *player;
 	cpSpace *space;
     NSTimeInterval lastTouch;

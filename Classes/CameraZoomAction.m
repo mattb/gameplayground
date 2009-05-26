@@ -43,7 +43,7 @@
     float theX = (originX - ((originX-x)*t));
     float theY = (originY - ((originY-y)*t));
     float theZ = (originZ - ((originZ-z)*t));
-    NSLog(@"Updating at %f to (%f, %f, %f)", t, theX, theY, theZ);
+    //NSLog(@"Updating at %f to (%f, %f, %f)", t, theX, theY, theZ);
     [[target camera] setCenterX:theX centerY:theY centerZ:0.0f];
     [[target camera] setEyeX:theX eyeY:theY eyeZ:theZ];
 }

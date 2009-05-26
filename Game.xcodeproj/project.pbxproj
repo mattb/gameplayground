@@ -223,6 +223,11 @@
 		D92123A50FC852060078D790 /* cpArbiter.c in Sources */ = {isa = PBXBuildFile; fileRef = D92123960FC852060078D790 /* cpArbiter.c */; };
 		D92123A60FC852060078D790 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = D92123970FC852060078D790 /* CMakeLists.txt */; };
 		D92123A70FC852060078D790 /* chipmunk.c in Sources */ = {isa = PBXBuildFile; fileRef = D92123990FC852060078D790 /* chipmunk.c */; };
+		D92338DC0FCC788A0081F9E3 /* CocosDenshion.mm in Sources */ = {isa = PBXBuildFile; fileRef = D92338DA0FCC788A0081F9E3 /* CocosDenshion.mm */; };
+		D92338E90FCC78A30081F9E3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D92338E80FCC78A30081F9E3 /* AudioToolbox.framework */; };
+		D92338EB0FCC78A30081F9E3 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D92338EA0FCC78A30081F9E3 /* OpenAL.framework */; };
+		D923395D0FCC7C120081F9E3 /* gloop.wav in Resources */ = {isa = PBXBuildFile; fileRef = D923395B0FCC7C120081F9E3 /* gloop.wav */; };
+		D923395E0FCC7C120081F9E3 /* slap.wav in Resources */ = {isa = PBXBuildFile; fileRef = D923395C0FCC7C120081F9E3 /* slap.wav */; };
 		D93091A60FCB273D00A3FE2C /* MenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D93091A50FCB273D00A3FE2C /* MenuScene.m */; };
 		D930920E0FCB40D300A3FE2C /* Obstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = D930920D0FCB40D300A3FE2C /* Obstacle.m */; };
 		D942A60B0FC4B2E20024211E /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = D942A5A50FC4B2E20024211E /* Action.m */; };
@@ -576,6 +581,13 @@
 		D92123970FC852060078D790 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		D92123980FC852060078D790 /* chipmunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk.h; sourceTree = "<group>"; };
 		D92123990FC852060078D790 /* chipmunk.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = chipmunk.c; sourceTree = "<group>"; };
+		D92338D90FCC788A0081F9E3 /* CocosDenshion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosDenshion.h; sourceTree = "<group>"; };
+		D92338DA0FCC788A0081F9E3 /* CocosDenshion.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CocosDenshion.mm; sourceTree = "<group>"; };
+		D92338DB0FCC788A0081F9E3 /* MyOpenALSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOpenALSupport.h; sourceTree = "<group>"; };
+		D92338E80FCC78A30081F9E3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D92338EA0FCC78A30081F9E3 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		D923395B0FCC7C120081F9E3 /* gloop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gloop.wav; sourceTree = "<group>"; };
+		D923395C0FCC7C120081F9E3 /* slap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = slap.wav; sourceTree = "<group>"; };
 		D93091A40FCB273D00A3FE2C /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScene.h; sourceTree = "<group>"; };
 		D93091A50FCB273D00A3FE2C /* MenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScene.m; sourceTree = "<group>"; };
 		D930920C0FCB40D300A3FE2C /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obstacle.h; sourceTree = "<group>"; };
@@ -763,6 +775,8 @@
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				6E6E10820FC0AA9200E5CA7B /* OpenGLES.framework in Frameworks */,
 				6E6E10830FC0AA9200E5CA7B /* QuartzCore.framework in Frameworks */,
+				D92338E90FCC78A30081F9E3 /* AudioToolbox.framework in Frameworks */,
+				D92338EB0FCC78A30081F9E3 /* OpenAL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -799,6 +813,8 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				D92338E80FCC78A30081F9E3 /* AudioToolbox.framework */,
+				D92338EA0FCC78A30081F9E3 /* OpenAL.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -806,6 +822,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D92338D80FCC788A0081F9E3 /* AudioSupport */,
 				D942A5A30FC4B2E20024211E /* cocos2d */,
 				32CA4F630368D1EE00C91783 /* Game_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
@@ -816,6 +833,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D92339240FCC7A3E0081F9E3 /* Sounds */,
 				D92113220FCAD8740053EA0E /* videoframes */,
 				D9A252570FC4B42B00FE9D56 /* PlanetCute PNG */,
 				D942A63B0FC4B2EB0024211E /* fps_images.png */,
@@ -1042,6 +1060,25 @@
 				D921173E0FCAF2730053EA0E /* CameraZoomAction.m */,
 			);
 			name = Actions;
+			sourceTree = "<group>";
+		};
+		D92338D80FCC788A0081F9E3 /* AudioSupport */ = {
+			isa = PBXGroup;
+			children = (
+				D92338D90FCC788A0081F9E3 /* CocosDenshion.h */,
+				D92338DA0FCC788A0081F9E3 /* CocosDenshion.mm */,
+				D92338DB0FCC788A0081F9E3 /* MyOpenALSupport.h */,
+			);
+			path = AudioSupport;
+			sourceTree = "<group>";
+		};
+		D92339240FCC7A3E0081F9E3 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				D923395B0FCC7C120081F9E3 /* gloop.wav */,
+				D923395C0FCC7C120081F9E3 /* slap.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		D942A5A30FC4B2E20024211E /* cocos2d */ = {
@@ -1586,6 +1623,8 @@
 				D92116670FCADB600053EA0E /* 00000111.jpg-0.png.pvr in Resources */,
 				D92116680FCADB600053EA0E /* 00000110.jpg-0.png.pvr in Resources */,
 				D92116690FCADB600053EA0E /* 00000109.jpg-0.png.pvr in Resources */,
+				D923395D0FCC7C120081F9E3 /* gloop.wav in Resources */,
+				D923395E0FCC7C120081F9E3 /* slap.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1668,6 +1707,7 @@
 				D921173F0FCAF2730053EA0E /* CameraZoomAction.m in Sources */,
 				D93091A60FCB273D00A3FE2C /* MenuScene.m in Sources */,
 				D930920E0FCB40D300A3FE2C /* Obstacle.m in Sources */,
+				D92338DC0FCC788A0081F9E3 /* CocosDenshion.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

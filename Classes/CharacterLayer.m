@@ -21,11 +21,37 @@ eachShape(void *ptr, void* unused)
     }
 }
 
+static int
+playerHitsWall(cpShape *a, cpShape *b, cpContact *contacts, int numContacts, cpFloat normal_coef, void *data) {
+    CDSoundEngine *engine = (CDSoundEngine *)data;
+    [engine playSound:1 channelGroupId:0 pitch:0.7f pan:0.0 gain:1.0 loop:NO];
+    return 1;
+}
+
+static int
+playerHitsRock(cpShape *a, cpShape *b, cpContact *contacts, int numContacts, cpFloat normal_coef, void *data) {
+    CDSoundEngine *engine = (CDSoundEngine *)data;
+    [engine playSound:0 channelGroupId:0 pitch:1.3f pan:0.0 gain:1.0 loop:NO];
+    return 1;
+}
+
 @implementation CharacterLayer
+-(void) setUpSoundEngine {
+    
+	int channelGroupCount = 1;
+	int channelGroups[1];
+	channelGroups[0] = 8;
+    
+	soundEngine = [[CDSoundEngine alloc] init:channelGroups channelGroupTotal:channelGroupCount audioSessionCategory:kAudioSessionCategory_AmbientSound];
+    [soundEngine loadBuffer:0 fileName:@"slap" fileType:@"wav"];
+	[soundEngine loadBuffer:1 fileName:@"gloop" fileType:@"wav"];
+}
+
 - (id) init {
     self = [super init];
     if(self != nil) {
 		self.isTouchEnabled = YES;
+        [self setUpSoundEngine];
                 
         CGSize wins = [[Director sharedDirector] winSize];
         cpInitChipmunk();
@@ -43,25 +69,29 @@ eachShape(void *ptr, void* unused)
         // bottom
         shape = cpSegmentShapeNew(staticBody, ccp(0,0), ccp(wins.width,0), 0.0f);
         shape->e = 1.0f; shape->u = 1.0f;
+        shape->collision_type = 0;
         cpSpaceAddStaticShape(space, shape);
         
         // top
         shape = cpSegmentShapeNew(staticBody, ccp(0,wins.height), ccp(wins.width,wins.height), 0.0f);
         shape->e = 1.0f; shape->u = 1.0f;
+        shape->collision_type = 0;
         cpSpaceAddStaticShape(space, shape);
         
         // left
         shape = cpSegmentShapeNew(staticBody, ccp(0,0), ccp(0,wins.height), 0.0f);
         shape->e = 1.0f; shape->u = 1.0f;
+        shape->collision_type = 0;
         cpSpaceAddStaticShape(space, shape);
         
         // right
         shape = cpSegmentShapeNew(staticBody, ccp(wins.width,0), ccp(wins.width,wins.height), 0.0f);
         shape->e = 1.0f; shape->u = 1.0f;
+        shape->collision_type = 0;
         cpSpaceAddStaticShape(space, shape); 
         
         player = [Player node];
-        player.position = ccp(120,120);
+        player.position = ccp(200,120);
         [self addChild:player];
         
         cpBody *body = cpBodyNew(10.0f, 10.0f);
@@ -74,8 +104,10 @@ eachShape(void *ptr, void* unused)
         playerShape->e = 0.5f; 
         playerShape->u = 0.5f;
         playerShape->data = player;
+        playerShape->collision_type = 1;
         cpSpaceAddShape(space, playerShape);    
 
+        srand(time(NULL) / 2);
         for(int i = 0; i<6; i++) {
             Obstacle *rock = [Obstacle node];
             rock.scale = 0.5f;
@@ -87,8 +119,12 @@ eachShape(void *ptr, void* unused)
         
             cpShape *rockShape = cpCircleShapeNew(rockbody, 22.0f, CGPointZero);
             rockShape->e = 1.0f; rockShape->u = 1.0f;
+            rockShape->collision_type = 2;
             cpSpaceAddStaticShape(space, rockShape);
         }
+        
+        cpSpaceAddCollisionPairFunc(space, 1, 2, &playerHitsRock, soundEngine);
+        cpSpaceAddCollisionPairFunc(space, 1, 0, &playerHitsWall, soundEngine);
         
         [self schedule: @selector(step:)];
     }
