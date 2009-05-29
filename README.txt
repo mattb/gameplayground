@@ -33,3 +33,6 @@ Sounds taken from http://www.freesound.org/packsViewSingle.php?id=1497
 
 9. Add a particle emitter to the player sprite. Make it track the player location.
 http://github.com/mattb/gameplayground/tree/acb93703c43791fed23e5753c0444ac7248a8e0f
+
+10. Try out AtlasAnimation with a single PVRTC source (using Muybridge's classic horse photos). 
+Assembled using RMagick and then converted to PVR format using texturetool (ruby code in composite_atlas_grid.rb)
