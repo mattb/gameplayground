@@ -12,8 +12,10 @@
 #import "chipmunk.h"
 #import "Sprite.h"
 
-@interface VideoSprite : Sprite {
+@interface VideoSprite : AtlasSprite {
 
 }
+
++(VideoSprite *)sprite;
 
 @end

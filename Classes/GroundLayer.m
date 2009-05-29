@@ -23,9 +23,25 @@
                 [self addChild:block];
             }
         }
-        VideoSprite *video = [VideoSprite node];
+        AtlasSpriteManager *manager = [AtlasSpriteManager spriteManagerWithFile:@"muybridge.pvr"];
+        [self addChild:manager];
+
+        Sprite *video = [AtlasSprite spriteWithRect:CGRectMake(0,0,128,128) spriteManager:manager];
+        AtlasAnimation *anim = [AtlasAnimation animationWithName:@"muybridge" delay:1/15.0f];
+        for(int j = 0; j<4; j++) {
+            for(int i = 0; i<4; i++) {
+                [anim addFrameWithRect:CGRectMake(i*128, j*128, 128, 93)];
+            }
+        }
+        
+        // Make the animation sequence repeat forever
+        id myAction = [Animate actionWithAnimation: anim];
+        id repeating = [RepeatForever actionWithAction:myAction];
+        
+        [video runAction:repeating];
+        
         video.position = ccp(200,150);
-        [self addChild:video];
+        [manager addChild:video];
     }
     return self;
 }    

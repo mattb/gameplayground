@@ -110,7 +110,7 @@ playerHitsRock(cpShape *a, cpShape *b, cpContact *contacts, int numContacts, cpF
         cpSpaceAddStaticShape(space, shape); 
         
         player = [Player node];
-        player.position = ccp(200,120);
+        player.position = ccp(350,200);
         
         ParticleSystem *emitter = [ParticleFlower node];
         emitter.texture = [[TextureMgr sharedTextureMgr] addImage: @"fire.pvr"];
@@ -137,7 +137,7 @@ playerHitsRock(cpShape *a, cpShape *b, cpContact *contacts, int numContacts, cpF
         for(int i = 0; i<6; i++) {
             Obstacle *rock = [Obstacle node];
             rock.scale = 0.5f;
-            rock.position = ccp(rand() % 400,rand() % 400);
+            rock.position = ccp(rand() % 300,rand() % 400);
             [self addChild:rock];
 
             cpBody *rockbody = cpBodyNew(INFINITY, INFINITY);
