@@ -166,7 +166,7 @@
 		32CA4F630368D1EE00C91783 /* Game_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game_Prefix.pch; sourceTree = "<group>"; };
 		6E6E10800FC0AA9200E5CA7B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		6E6E10810FC0AA9200E5CA7B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		6E6E112E0FC0AD8E00E5CA7B /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.txt; path = "Platforms/iPhoneOS.platform/Developer/Library/Xcode/Project Templates/Application/Cocos2D Ready Application/README.txt"; sourceTree = DEVELOPER_DIR; };
+		6E6E112E0FC0AD8E00E5CA7B /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D92112EF0FCAD5430053EA0E /* VideoSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoSprite.h; sourceTree = "<group>"; };
 		D92112F00FCAD5430053EA0E /* VideoSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoSprite.m; sourceTree = "<group>"; };
