@@ -37,3 +37,6 @@ http://github.com/mattb/gameplayground/tree/acb93703c43791fed23e5753c0444ac7248a
 10. Try out AtlasAnimation with a single PVRTC source (using Muybridge's classic horse photos). 
 http://github.com/mattb/gameplayground/tree/17e181ba00f8ad449acbc879dd414479e4962135
 Assembled using RMagick and then converted to PVR format using texturetool (ruby code in composite_atlas_grid.rb)
+
+11. Add a new scene to play with bezier paths controlling sprites following finger touches, Flight Control style.
+First attempt uses a ringbuffer of the last ten touches and timestamps, and uses a regular timer tick to schedule BezierTo actions. Works but is a bit wobbly.
