@@ -153,6 +153,7 @@
 		D9A252D70FC4B59C00FE9D56 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A252D60FC4B59C00FE9D56 /* Block.m */; };
 		D9A253D00FC4BF3300FE9D56 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A253CF0FC4BF3300FE9D56 /* Player.m */; };
 		D9A253D50FC4BF7400FE9D56 /* CharacterLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A253D40FC4BF7400FE9D56 /* CharacterLayer.m */; };
+		D9B73C0D0FD4396000D06520 /* PathScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B73C0C0FD4396000D06520 /* PathScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -385,6 +386,8 @@
 		D9A253CF0FC4BF3300FE9D56 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		D9A253D30FC4BF7400FE9D56 /* CharacterLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterLayer.h; sourceTree = "<group>"; };
 		D9A253D40FC4BF7400FE9D56 /* CharacterLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterLayer.m; sourceTree = "<group>"; };
+		D9B73C0B0FD4396000D06520 /* PathScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathScene.h; sourceTree = "<group>"; };
+		D9B73C0C0FD4396000D06520 /* PathScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -731,6 +734,8 @@
 				D9A252CD0FC4B4CB00FE9D56 /* MainScene.m */,
 				D93091A40FCB273D00A3FE2C /* MenuScene.h */,
 				D93091A50FCB273D00A3FE2C /* MenuScene.m */,
+				D9B73C0B0FD4396000D06520 /* PathScene.h */,
+				D9B73C0C0FD4396000D06520 /* PathScene.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -952,6 +957,7 @@
 				D93091A60FCB273D00A3FE2C /* MenuScene.m in Sources */,
 				D930920E0FCB40D300A3FE2C /* Obstacle.m in Sources */,
 				D92338DC0FCC788A0081F9E3 /* CocosDenshion.mm in Sources */,
+				D9B73C0D0FD4396000D06520 /* PathScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
