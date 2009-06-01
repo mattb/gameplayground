@@ -8,13 +8,14 @@
 
 #import "PathScene.h"
 #import "GroundLayer.h"
+#import "PathLayer.h"
 
 @implementation PathScene
 - (id) init {
     self = [super init];
-    if (self != nil) {        
-        GroundLayer *layer = [GroundLayer node];
-        [self addChild:layer];        
+    if (self != nil) {
+        [self addChild:[GroundLayer node]];        
+        [self addChild:[PathLayer node]];        
     }
     return self;
 }

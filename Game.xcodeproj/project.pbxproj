@@ -154,6 +154,7 @@
 		D9A253D00FC4BF3300FE9D56 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A253CF0FC4BF3300FE9D56 /* Player.m */; };
 		D9A253D50FC4BF7400FE9D56 /* CharacterLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A253D40FC4BF7400FE9D56 /* CharacterLayer.m */; };
 		D9B73C0D0FD4396000D06520 /* PathScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B73C0C0FD4396000D06520 /* PathScene.m */; };
+		D9B73C120FD43CE300D06520 /* PathLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B73C110FD43CE300D06520 /* PathLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -388,6 +389,8 @@
 		D9A253D40FC4BF7400FE9D56 /* CharacterLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterLayer.m; sourceTree = "<group>"; };
 		D9B73C0B0FD4396000D06520 /* PathScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathScene.h; sourceTree = "<group>"; };
 		D9B73C0C0FD4396000D06520 /* PathScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathScene.m; sourceTree = "<group>"; };
+		D9B73C100FD43CE300D06520 /* PathLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathLayer.h; sourceTree = "<group>"; };
+		D9B73C110FD43CE300D06520 /* PathLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -762,6 +765,8 @@
 				D9A252D30FC4B50000FE9D56 /* GroundLayer.m */,
 				D9A253D30FC4BF7400FE9D56 /* CharacterLayer.h */,
 				D9A253D40FC4BF7400FE9D56 /* CharacterLayer.m */,
+				D9B73C100FD43CE300D06520 /* PathLayer.h */,
+				D9B73C110FD43CE300D06520 /* PathLayer.m */,
 			);
 			name = Layers;
 			sourceTree = "<group>";
@@ -958,6 +963,7 @@
 				D930920E0FCB40D300A3FE2C /* Obstacle.m in Sources */,
 				D92338DC0FCC788A0081F9E3 /* CocosDenshion.mm in Sources */,
 				D9B73C0D0FD4396000D06520 /* PathScene.m in Sources */,
+				D9B73C120FD43CE300D06520 /* PathLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
