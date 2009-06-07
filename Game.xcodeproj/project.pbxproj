@@ -16,6 +16,9 @@
 		6E6E10830FC0AA9200E5CA7B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E6E10810FC0AA9200E5CA7B /* QuartzCore.framework */; };
 		6E6E112F0FC0AD8E00E5CA7B /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6E6E112E0FC0AD8E00E5CA7B /* README.txt */; };
 		D91AB8D30FDBE8F1001B7154 /* small-fry.png in Resources */ = {isa = PBXBuildFile; fileRef = D91AB8D20FDBE8F1001B7154 /* small-fry.png */; };
+		D91AB8E00FDBEB78001B7154 /* FreepixelPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D91AB8DF0FDBEB78001B7154 /* FreepixelPlayer.m */; };
+		D91AB91D0FDBEE23001B7154 /* FreepixelLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D91AB91C0FDBEE23001B7154 /* FreepixelLayer.m */; };
+		D91AB9250FDBEEA8001B7154 /* FreepixelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D91AB9240FDBEEA8001B7154 /* FreepixelScene.m */; };
 		D92112F10FCAD5430053EA0E /* VideoSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = D92112F00FCAD5430053EA0E /* VideoSprite.m */; };
 		D921173F0FCAF2730053EA0E /* CameraZoomAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D921173E0FCAF2730053EA0E /* CameraZoomAction.m */; };
 		D921239A0FC852060078D790 /* cpVect.c in Sources */ = {isa = PBXBuildFile; fileRef = D92123800FC852060078D790 /* cpVect.c */; };
@@ -175,6 +178,12 @@
 		6E6E112E0FC0AD8E00E5CA7B /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D91AB8D20FDBE8F1001B7154 /* small-fry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-fry.png"; sourceTree = "<group>"; };
+		D91AB8DE0FDBEB78001B7154 /* FreepixelPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreepixelPlayer.h; sourceTree = "<group>"; };
+		D91AB8DF0FDBEB78001B7154 /* FreepixelPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreepixelPlayer.m; sourceTree = "<group>"; };
+		D91AB91B0FDBEE23001B7154 /* FreepixelLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreepixelLayer.h; sourceTree = "<group>"; };
+		D91AB91C0FDBEE23001B7154 /* FreepixelLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreepixelLayer.m; sourceTree = "<group>"; };
+		D91AB9230FDBEEA8001B7154 /* FreepixelScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreepixelScene.h; sourceTree = "<group>"; };
+		D91AB9240FDBEEA8001B7154 /* FreepixelScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreepixelScene.m; sourceTree = "<group>"; };
 		D92112EF0FCAD5430053EA0E /* VideoSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoSprite.h; sourceTree = "<group>"; };
 		D92112F00FCAD5430053EA0E /* VideoSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoSprite.m; sourceTree = "<group>"; };
 		D921173D0FCAF2730053EA0E /* CameraZoomAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraZoomAction.h; sourceTree = "<group>"; };
@@ -758,6 +767,8 @@
 				D93091A50FCB273D00A3FE2C /* MenuScene.m */,
 				D9B73C0B0FD4396000D06520 /* PathScene.h */,
 				D9B73C0C0FD4396000D06520 /* PathScene.m */,
+				D91AB9230FDBEEA8001B7154 /* FreepixelScene.h */,
+				D91AB9240FDBEEA8001B7154 /* FreepixelScene.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -773,6 +784,8 @@
 				D92112F00FCAD5430053EA0E /* VideoSprite.m */,
 				D930920C0FCB40D300A3FE2C /* Obstacle.h */,
 				D930920D0FCB40D300A3FE2C /* Obstacle.m */,
+				D91AB8DE0FDBEB78001B7154 /* FreepixelPlayer.h */,
+				D91AB8DF0FDBEB78001B7154 /* FreepixelPlayer.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -786,6 +799,8 @@
 				D9A253D40FC4BF7400FE9D56 /* CharacterLayer.m */,
 				D9B73C100FD43CE300D06520 /* PathLayer.h */,
 				D9B73C110FD43CE300D06520 /* PathLayer.m */,
+				D91AB91B0FDBEE23001B7154 /* FreepixelLayer.h */,
+				D91AB91C0FDBEE23001B7154 /* FreepixelLayer.m */,
 			);
 			name = Layers;
 			sourceTree = "<group>";
@@ -986,6 +1001,9 @@
 				D9B73C120FD43CE300D06520 /* PathLayer.m in Sources */,
 				D952E46B0FD6CAFB0094EAF9 /* SimpleAudioEngine.mm in Sources */,
 				D952E4750FD6CB280094EAF9 /* CDAudioManager.mm in Sources */,
+				D91AB8E00FDBEB78001B7154 /* FreepixelPlayer.m in Sources */,
+				D91AB91D0FDBEE23001B7154 /* FreepixelLayer.m in Sources */,
+				D91AB9250FDBEEA8001B7154 /* FreepixelScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
