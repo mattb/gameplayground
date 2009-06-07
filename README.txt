@@ -43,4 +43,4 @@ http://github.com/mattb/gameplayground/tree/4bb19071e54454eea2ec7791bfd3dc329971
 First attempt uses a ringbuffer of the last ten touches and timestamps, and uses a regular timer tick to schedule BezierTo actions. Works but is a bit wobbly.
 
 12. Add a new scene to play with the Freepixel sprite sheet from http://www.squidi.net/pixel/char.default.php
-
+http://github.com/mattb/gameplayground/tree/d4dc28e4cadfff3dfd1804cd7f05048dc170fd80
