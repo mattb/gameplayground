@@ -39,4 +39,5 @@ http://github.com/mattb/gameplayground/tree/17e181ba00f8ad449acbc879dd414479e496
 Assembled using RMagick and then converted to PVR format using texturetool (ruby code in composite_atlas_grid.rb)
 
 11. Add a new scene to play with bezier paths controlling sprites following finger touches, Flight Control style.
+http://github.com/mattb/gameplayground/tree/4bb19071e54454eea2ec7791bfd3dc3299719577
 First attempt uses a ringbuffer of the last ten touches and timestamps, and uses a regular timer tick to schedule BezierTo actions. Works but is a bit wobbly.

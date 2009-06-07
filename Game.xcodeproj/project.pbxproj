@@ -15,6 +15,7 @@
 		6E6E10820FC0AA9200E5CA7B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E6E10800FC0AA9200E5CA7B /* OpenGLES.framework */; };
 		6E6E10830FC0AA9200E5CA7B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E6E10810FC0AA9200E5CA7B /* QuartzCore.framework */; };
 		6E6E112F0FC0AD8E00E5CA7B /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6E6E112E0FC0AD8E00E5CA7B /* README.txt */; };
+		D91AB8D30FDBE8F1001B7154 /* small-fry.png in Resources */ = {isa = PBXBuildFile; fileRef = D91AB8D20FDBE8F1001B7154 /* small-fry.png */; };
 		D92112F10FCAD5430053EA0E /* VideoSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = D92112F00FCAD5430053EA0E /* VideoSprite.m */; };
 		D921173F0FCAF2730053EA0E /* CameraZoomAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D921173E0FCAF2730053EA0E /* CameraZoomAction.m */; };
 		D921239A0FC852060078D790 /* cpVect.c in Sources */ = {isa = PBXBuildFile; fileRef = D92123800FC852060078D790 /* cpVect.c */; };
@@ -32,8 +33,6 @@
 		D92123A60FC852060078D790 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = D92123970FC852060078D790 /* CMakeLists.txt */; };
 		D92123A70FC852060078D790 /* chipmunk.c in Sources */ = {isa = PBXBuildFile; fileRef = D92123990FC852060078D790 /* chipmunk.c */; };
 		D92338DC0FCC788A0081F9E3 /* CocosDenshion.mm in Sources */ = {isa = PBXBuildFile; fileRef = D92338DA0FCC788A0081F9E3 /* CocosDenshion.mm */; };
-		D92338E90FCC78A30081F9E3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D92338E80FCC78A30081F9E3 /* AudioToolbox.framework */; };
-		D92338EB0FCC78A30081F9E3 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D92338EA0FCC78A30081F9E3 /* OpenAL.framework */; };
 		D923395D0FCC7C120081F9E3 /* gloop.wav in Resources */ = {isa = PBXBuildFile; fileRef = D923395B0FCC7C120081F9E3 /* gloop.wav */; };
 		D923395E0FCC7C120081F9E3 /* slap.wav in Resources */ = {isa = PBXBuildFile; fileRef = D923395C0FCC7C120081F9E3 /* slap.wav */; };
 		D92339D10FCC9C9D0081F9E3 /* fire.pvr in Resources */ = {isa = PBXBuildFile; fileRef = D92339D00FCC9C9D0081F9E3 /* fire.pvr */; };
@@ -90,6 +89,11 @@
 		D942A6390FC4B2E20024211E /* TouchHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D942A6080FC4B2E20024211E /* TouchHandler.m */; };
 		D942A63A0FC4B2E20024211E /* Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = D942A60A0FC4B2E20024211E /* Transition.m */; };
 		D942A63C0FC4B2EB0024211E /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = D942A63B0FC4B2EB0024211E /* fps_images.png */; };
+		D952E46B0FD6CAFB0094EAF9 /* SimpleAudioEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = D952E4690FD6CAFB0094EAF9 /* SimpleAudioEngine.mm */; };
+		D952E4750FD6CB280094EAF9 /* CDAudioManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = D952E4660FD6CAE70094EAF9 /* CDAudioManager.mm */; };
+		D952E5100FD6CCEC0094EAF9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D952E50F0FD6CCEC0094EAF9 /* OpenAL.framework */; };
+		D952E5370FD6CD2B0094EAF9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D952E5360FD6CD2B0094EAF9 /* AudioToolbox.framework */; };
+		D952E5480FD6CD420094EAF9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D952E5470FD6CD420094EAF9 /* AVFoundation.framework */; };
 		D9A252920FC4B42B00FE9D56 /* Brown Block.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252580FC4B42B00FE9D56 /* Brown Block.png */; };
 		D9A252930FC4B42B00FE9D56 /* Character Boy.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A252590FC4B42B00FE9D56 /* Character Boy.png */; };
 		D9A252940FC4B42B00FE9D56 /* Character Cat Girl.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A2525A0FC4B42B00FE9D56 /* Character Cat Girl.png */; };
@@ -170,6 +174,7 @@
 		6E6E10810FC0AA9200E5CA7B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6E6E112E0FC0AD8E00E5CA7B /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D91AB8D20FDBE8F1001B7154 /* small-fry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-fry.png"; sourceTree = "<group>"; };
 		D92112EF0FCAD5430053EA0E /* VideoSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoSprite.h; sourceTree = "<group>"; };
 		D92112F00FCAD5430053EA0E /* VideoSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoSprite.m; sourceTree = "<group>"; };
 		D921173D0FCAF2730053EA0E /* CameraZoomAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraZoomAction.h; sourceTree = "<group>"; };
@@ -205,8 +210,6 @@
 		D92338D90FCC788A0081F9E3 /* CocosDenshion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosDenshion.h; sourceTree = "<group>"; };
 		D92338DA0FCC788A0081F9E3 /* CocosDenshion.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CocosDenshion.mm; sourceTree = "<group>"; };
 		D92338DB0FCC788A0081F9E3 /* MyOpenALSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOpenALSupport.h; sourceTree = "<group>"; };
-		D92338E80FCC78A30081F9E3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		D92338EA0FCC78A30081F9E3 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D923395B0FCC7C120081F9E3 /* gloop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gloop.wav; sourceTree = "<group>"; };
 		D923395C0FCC7C120081F9E3 /* slap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = slap.wav; sourceTree = "<group>"; };
 		D92339D00FCC9C9D0081F9E3 /* fire.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire.pvr; sourceTree = "<group>"; };
@@ -319,6 +322,14 @@
 		D942A6090FC4B2E20024211E /* Transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transition.h; sourceTree = "<group>"; };
 		D942A60A0FC4B2E20024211E /* Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transition.m; sourceTree = "<group>"; };
 		D942A63B0FC4B2EB0024211E /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fps_images.png; sourceTree = "<group>"; };
+		D952E4660FD6CAE70094EAF9 /* CDAudioManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDAudioManager.mm; sourceTree = "<group>"; };
+		D952E4670FD6CAFB0094EAF9 /* CDOpenALSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDOpenALSupport.h; sourceTree = "<group>"; };
+		D952E4680FD6CAFB0094EAF9 /* CDAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAudioManager.h; sourceTree = "<group>"; };
+		D952E4690FD6CAFB0094EAF9 /* SimpleAudioEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SimpleAudioEngine.mm; sourceTree = "<group>"; };
+		D952E46A0FD6CAFB0094EAF9 /* SimpleAudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAudioEngine.h; sourceTree = "<group>"; };
+		D952E50F0FD6CCEC0094EAF9 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		D952E5360FD6CD2B0094EAF9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D952E5470FD6CD420094EAF9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D9A252580FC4B42B00FE9D56 /* Brown Block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Brown Block.png"; sourceTree = "<group>"; };
 		D9A252590FC4B42B00FE9D56 /* Character Boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Character Boy.png"; sourceTree = "<group>"; };
 		D9A2525A0FC4B42B00FE9D56 /* Character Cat Girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Character Cat Girl.png"; sourceTree = "<group>"; };
@@ -403,8 +414,9 @@
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				6E6E10820FC0AA9200E5CA7B /* OpenGLES.framework in Frameworks */,
 				6E6E10830FC0AA9200E5CA7B /* QuartzCore.framework in Frameworks */,
-				D92338E90FCC78A30081F9E3 /* AudioToolbox.framework in Frameworks */,
-				D92338EB0FCC78A30081F9E3 /* OpenAL.framework in Frameworks */,
+				D952E5100FD6CCEC0094EAF9 /* OpenAL.framework in Frameworks */,
+				D952E5370FD6CD2B0094EAF9 /* AudioToolbox.framework in Frameworks */,
+				D952E5480FD6CD420094EAF9 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,8 +453,9 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				D92338E80FCC78A30081F9E3 /* AudioToolbox.framework */,
-				D92338EA0FCC78A30081F9E3 /* OpenAL.framework */,
+				D952E50F0FD6CCEC0094EAF9 /* OpenAL.framework */,
+				D952E5360FD6CD2B0094EAF9 /* AudioToolbox.framework */,
+				D952E5470FD6CD420094EAF9 /* AVFoundation.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -461,6 +474,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D91AB8D20FDBE8F1001B7154 /* small-fry.png */,
 				D92339D60FCC9CB90081F9E3 /* fire.png */,
 				D92339D00FCC9C9D0081F9E3 /* fire.pvr */,
 				D92339240FCC7A3E0081F9E3 /* Sounds */,
@@ -504,6 +518,11 @@
 		D92338D80FCC788A0081F9E3 /* AudioSupport */ = {
 			isa = PBXGroup;
 			children = (
+				D952E4670FD6CAFB0094EAF9 /* CDOpenALSupport.h */,
+				D952E4660FD6CAE70094EAF9 /* CDAudioManager.mm */,
+				D952E4680FD6CAFB0094EAF9 /* CDAudioManager.h */,
+				D952E4690FD6CAFB0094EAF9 /* SimpleAudioEngine.mm */,
+				D952E46A0FD6CAFB0094EAF9 /* SimpleAudioEngine.h */,
 				D92338D90FCC788A0081F9E3 /* CocosDenshion.h */,
 				D92338DA0FCC788A0081F9E3 /* CocosDenshion.mm */,
 				D92338DB0FCC788A0081F9E3 /* MyOpenALSupport.h */,
@@ -879,6 +898,7 @@
 				D92339D10FCC9C9D0081F9E3 /* fire.pvr in Resources */,
 				D92339D70FCC9CB90081F9E3 /* fire.png in Resources */,
 				D92AF0380FD00D1C004F8211 /* muybridge.pvr in Resources */,
+				D91AB8D30FDBE8F1001B7154 /* small-fry.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -964,6 +984,8 @@
 				D92338DC0FCC788A0081F9E3 /* CocosDenshion.mm in Sources */,
 				D9B73C0D0FD4396000D06520 /* PathScene.m in Sources */,
 				D9B73C120FD43CE300D06520 /* PathLayer.m in Sources */,
+				D952E46B0FD6CAFB0094EAF9 /* SimpleAudioEngine.mm in Sources */,
+				D952E4750FD6CB280094EAF9 /* CDAudioManager.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -990,6 +1012,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator2.2.1.sdk/System/Library/Frameworks,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Game_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;

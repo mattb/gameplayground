@@ -58,7 +58,7 @@
             bezier.controlPoint_1 = bezier.startPosition;
         }
         
-        id action = [BezierBy actionWithDuration:0.25 bezier: bezier];
+        id action = [BezierBy actionWithDuration:0.1 bezier: bezier];
         [thing runAction:action];
     }
 }

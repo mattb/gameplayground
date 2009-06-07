@@ -22,7 +22,7 @@
  */
 
 #import "CocosDenshion.h"
-#import "MyOpenALSupport.h"
+#import "CDOpenALSupport.h"
 #import "ccMacros.h"
 
 //Audio session interruption callback - used if sound engine is 
@@ -45,8 +45,8 @@ extern void interruptionListenerCallback (void *inUserData, UInt32 interruptionS
  */
 - (BOOL) _initOpenAL
 {
-	ALenum			error;
-	_context = NULL;
+	//ALenum			error;
+	context = NULL;
 	ALCdevice		*newDevice = NULL;
 	
 	_buffers = new ALuint[CD_MAX_BUFFERS];
@@ -59,26 +59,26 @@ extern void interruptionListenerCallback (void *inUserData, UInt32 interruptionS
 	{
 		// Create a new OpenAL Context
 		// The new context will render to the OpenAL Device just created 
-		_context = alcCreateContext(newDevice, 0);
-		if (_context != NULL)
+		context = alcCreateContext(newDevice, 0);
+		if (context != NULL)
 		{
 			// Make the new context the Current OpenAL Context
-			alcMakeContextCurrent(_context);
+			alcMakeContextCurrent(context);
 			
 			//Don't want a distance model
 			alDistanceModel(AL_NONE);
 			
 			// Create some OpenAL Buffer Objects
 			alGenBuffers(CD_MAX_BUFFERS, _buffers);
-			if((error = alGetError()) != AL_NO_ERROR) {
-				CCLOG(@"Error Generating Buffers: %x", error);
+			if((lastErrorCode = alGetError()) != AL_NO_ERROR) {
+				CCLOG(@"Denshion: Error Generating Buffers: %x", lastErrorCode);
 				return FALSE;//No buffers
 			}
 			
 			// Create some OpenAL Source Objects
 			alGenSources(CD_MAX_SOURCES, _sources);
-			if(error = alGetError() != AL_NO_ERROR) {
-				CCLOG(@"Error generating sources! %x\n", error);
+			if((lastErrorCode = alGetError()) != AL_NO_ERROR) {
+				CCLOG(@"Denshion: Error generating sources! %x\n", lastErrorCode);
 				return FALSE;//No sources
 			} 
 			
@@ -91,9 +91,9 @@ extern void interruptionListenerCallback (void *inUserData, UInt32 interruptionS
 }
 
 - (void) dealloc {
-	ALCcontext	*context = NULL;
+	ALCcontext	*currentContext = NULL;
     ALCdevice	*device = NULL;
-	ALenum		error;
+	
 
 	CCLOG(@"Denshion: Deallocing sound engine.");
 	delete _bufferStates;
@@ -102,21 +102,21 @@ extern void interruptionListenerCallback (void *inUserData, UInt32 interruptionS
 	
 	// Delete the Sources
     alDeleteSources(CD_MAX_SOURCES, _sources);
-	if(error = alGetError() != AL_NO_ERROR) {
-		CCLOG(@"Denshion: Error deleting sources! %x\n", error);
+	if((lastErrorCode = alGetError()) != AL_NO_ERROR) {
+		CCLOG(@"Denshion: Error deleting sources! %x\n", lastErrorCode);
 	} 
 	// Delete the Buffers
     alDeleteBuffers(CD_MAX_BUFFERS, _buffers);
-	if(error = alGetError() != AL_NO_ERROR) {
-		CCLOG(@"Denshion: Error deleting buffers! %x\n", error);
+	if((lastErrorCode = alGetError()) != AL_NO_ERROR) {
+		CCLOG(@"Denshion: Error deleting buffers! %x\n", lastErrorCode);
 	} 
 	
 	//Get active context
-    context = alcGetCurrentContext();
+    currentContext = alcGetCurrentContext();
     //Get device for active context
-    device = alcGetContextsDevice(context);
+    device = alcGetContextsDevice(currentContext);
     //Release context
-    alcDestroyContext(context);
+    alcDestroyContext(currentContext);
     //Close device
     alcCloseDevice(device);
 	
@@ -140,7 +140,7 @@ extern void interruptionListenerCallback (void *inUserData, UInt32 interruptionS
  */
 - (id)init:(int[]) channelGroupDefinitions channelGroupTotal:(int) channelGroupTotal audioSessionCategory:(UInt32) audioSessionCategory 
 {	
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		
 		_mute = FALSE;
 		_audioSessionCategory = audioSessionCategory;
@@ -197,7 +197,53 @@ extern void interruptionListenerCallback (void *inUserData, UInt32 interruptionS
 	return [self init:channelGroupDefinitions channelGroupTotal:channelGroupTotal audioSessionCategory:CD_IGNORE_AUDIO_SESSION];
 }	
 
-
+/**
+ * Delete the buffer identified by soundId
+ * @return true if buffer deleted successfully, otherwise false
+ */
+- (BOOL) unloadBuffer:(int) soundId 
+{
+	//Before a buffer can be deleted any sources that are attached to it must be stopped
+	for (int i=0; i < _channelTotal; i++) {
+		//Note: tried getting the AL_BUFFER attribute of the source instead but doesn't
+		//appear to work on a device - just returned zero.
+		if (_buffers[soundId] == _sourceBufferAttachments[i]) {
+			
+			CCLOG(@"Denshion: Found attached source %i %i %i",i,_buffers[soundId],_sourceBufferAttachments[i]);
+			
+			//Stop source and detach
+			alSourceStop(_sources[i]);	
+			if((lastErrorCode = alGetError()) != AL_NO_ERROR) {
+				CCLOG(@"Denshion: error stopping source: %x\n", lastErrorCode);
+			}	
+			
+			alSourcei(_sources[i], AL_BUFFER, 0);//Attach to "NULL" buffer to detach
+			if((lastErrorCode = alGetError()) != AL_NO_ERROR) {
+				CCLOG(@"Denshion: error detaching buffer: %x\n", lastErrorCode);
+			} else {
+				//Record that source is now attached to nothing
+				_sourceBufferAttachments[i] = 0;
+			}	
+		}	
+	}	
+	
+	alDeleteBuffers(1, &_buffers[soundId]);
+	if((lastErrorCode = alGetError()) != AL_NO_ERROR) {
+		CCLOG(@"Denshion: error deleting buffer: %x\n", lastErrorCode);
+		_bufferStates[soundId] = CD_BS_FAILED;
+		return FALSE;
+	} 
+	
+	alGenBuffers(1, &_buffers[soundId]);
+	if((lastErrorCode = alGetError()) != AL_NO_ERROR) {
+		CCLOG(@"Denshion: error regenerating buffer: %x\n", lastErrorCode);
+		_bufferStates[soundId] = CD_BS_FAILED;
+		return FALSE;
+	} 
+	
+	return TRUE;
+	
+}	
 
 /**
  * Load sound data for later play back.
@@ -205,7 +251,7 @@ extern void interruptionListenerCallback (void *inUserData, UInt32 interruptionS
  */
 - (BOOL) loadBuffer:(int) soundId fileName:(NSString*) fileName fileType:(NSString*) fileType
 {
-	ALenum  error = AL_NO_ERROR;
+	
 	ALenum  format;
 	ALvoid* data;
 	ALsizei size;
@@ -221,6 +267,7 @@ extern void interruptionListenerCallback (void *inUserData, UInt32 interruptionS
 
 	if (!functioning) {
 		//OpenAL initialisation has previously failed
+		CCLOG(@"Denshion: Loading buffer failed because sound engine state != functioning");
 		return FALSE;
 	}	
 
@@ -232,50 +279,19 @@ extern void interruptionListenerCallback (void *inUserData, UInt32 interruptionS
 	if (fileURL)
 	{
 		if (_bufferStates[soundId] != CD_BS_EMPTY) {
-		
 			CCLOG(@"Denshion: non empty buffer, regenerating");
-			//Must first delete buffer but can only do so if it is not attached to any sources
-			
-			for (int i=0; i < _channelTotal; i++) {
-				//Note: tried getting the AL_BUFFER attribute of the source instead but doesn't
-				//appear to work on a device - just returned zero.
-				if (_buffers[soundId] == _sourceBufferAttachments[i]) {
-					
-					CCLOG(@"Found attached source %i %i %i",i,_buffers[soundId],_sourceBufferAttachments[i]);
-					
-					//Stop source and detach
-					alSourceStop(_sources[i]);	
-					if((error = alGetError()) != AL_NO_ERROR) {
-						CCLOG(@"error stopping source: %x\n", error);
-					}	
-					
-					alSourcei(_sources[i], AL_BUFFER, 0);//Attach to "NULL" buffer to detach
-					if((error = alGetError()) != AL_NO_ERROR) {
-						CCLOG(@"error detaching buffer: %x\n", error);
-					}
-				}	
+			if (![self unloadBuffer:soundId]) {
+				//Deletion of buffer failed, delete buffer routine has set buffer state and lastErrorCode
+				return FALSE;
 			}	
-			
-			alDeleteBuffers(1, &_buffers[soundId]);
-			if((error = alGetError()) != AL_NO_ERROR) {
-				CCLOG(@"error deleting buffer: %x\n", error);
-				_bufferStates[soundId] = CD_BS_FAILED;
-				return FALSE;
-			} 
-			alGenBuffers(1, &_buffers[soundId]);
-			if((error = alGetError()) != AL_NO_ERROR) {
-				CCLOG(@"error regenerating buffer: %x\n", error);
-				_bufferStates[soundId] = CD_BS_FAILED;
-				return FALSE;
-			} 
 		}	
 		
 		data = MyGetOpenALAudioData(fileURL, &size, &format, &freq);
 		CCLOG(@"Denshion: size %i frequency %i format %i %i", size, freq, format, data);
 		CFRelease(fileURL);
 		
-		if(data == NULL || (error = alGetError()) != AL_NO_ERROR) {
-			CCLOG(@"error loading sound: %x\n", error);
+		if(data == NULL || (lastErrorCode = alGetError()) != AL_NO_ERROR) {
+			CCLOG(@"Denshion: error loading sound: %x\n", lastErrorCode);
 			_bufferStates[soundId] = CD_BS_FAILED;
 			if (data != NULL) {
 				free(data);//Free memory, it was an OpenAL error so there is data to free
@@ -285,13 +301,13 @@ extern void interruptionListenerCallback (void *inUserData, UInt32 interruptionS
 		
 		alBufferData(_buffers[soundId], format, data, size, freq);
 		free(data);		
-		if((error = alGetError()) != AL_NO_ERROR) {
-			CCLOG(@"error attaching audio to buffer: %x\n", error);
+		if((lastErrorCode = alGetError()) != AL_NO_ERROR) {
+			CCLOG(@"Denshion: error attaching audio to buffer: %x\n", lastErrorCode);
 			_bufferStates[soundId] = CD_BS_FAILED;
 			return FALSE;
 		} 
 	} else {
-		CCLOG(@"Could not find file!\n");
+		CCLOG(@"Denshion: Could not find file!\n");
 		//Don't change buffer state here as it will be the same as before method was called	
 		return FALSE;
 	}	
@@ -353,38 +369,75 @@ extern void interruptionListenerCallback (void *inUserData, UInt32 interruptionS
 	NSAssert(channelGroupId < _channelGroupTotal, @"channelGroupId exceeds limit");
 	NSAssert(pitch > 0, @"pitch must be greater than zero");
 	NSAssert(pan >= -1 && pan <= 1, @"pan must be between -1 and 1");
-	NSAssert(gain >= 0, @"gain not not be negative");
+	NSAssert(gain >= 0, @"gain can not be negative");
 #endif
 	
-	//If mute or initialisation has failed then do nothing
-	if (_mute || !functioning) {
+	//If mute or initialisation has failed or buffer is not loaded then do nothing
+	if (_mute || !functioning || _bufferStates[soundId] != CD_BS_LOADED) {
+#ifdef DEBUG
+		if (!functioning) {
+			CCLOG(@"Denshion: sound playback aborted because sound engine is not functioning");
+		} else if (_bufferStates[soundId] != CD_BS_LOADED) {
+			CCLOG(@"Denshion: sound playback aborted because buffer %i is not loaded", soundId);
+		}	
+#endif		
 		return CD_MUTE;
 	}	
 	
+	
 	//Work out which channel we can use
 	int channel = _channelGroups[channelGroupId].currentIndex;
-	if (_channelGroups[channelGroupId].startIndex != _channelGroups[channelGroupId].endIndex) {
-		_channelGroups[channelGroupId].currentIndex++;
-		if(_channelGroups[channelGroupId].currentIndex > _channelGroups[channelGroupId].endIndex) {
-			_channelGroups[channelGroupId].currentIndex = _channelGroups[channelGroupId].startIndex; 
+	if (channel != CD_CHANNEL_GROUP_NON_INTERRUPTIBLE) {
+		if (_channelGroups[channelGroupId].startIndex != _channelGroups[channelGroupId].endIndex) {
+			_channelGroups[channelGroupId].currentIndex++;
+			if(_channelGroups[channelGroupId].currentIndex > _channelGroups[channelGroupId].endIndex) {
+				_channelGroups[channelGroupId].currentIndex = _channelGroups[channelGroupId].startIndex; 
+			}	
+		}	
+		return [self _startSound:soundId channelId:channel pitchVal:pitch panVal:pan gainVal:gain looping:loop checkState:TRUE];
+	} else {
+		//Channel group is non interruptible therefore we must search for the first non playing channel/source if there are any
+		int checkingIndex = _channelGroups[channelGroupId].startIndex;
+		ALint state = 0;
+		while ((checkingIndex <= _channelGroups[channelGroupId].endIndex) && (channel == CD_CHANNEL_GROUP_NON_INTERRUPTIBLE)) {
+			//Check if source is playing
+			alGetSourcei(_sources[checkingIndex], AL_SOURCE_STATE, &state);
+			if (state != AL_PLAYING) {
+				channel = checkingIndex;
+			}	
+			checkingIndex++;
+		}
+		
+		if (channel != CD_CHANNEL_GROUP_NON_INTERRUPTIBLE) {
+			//Found a free channel
+			return [self _startSound:soundId channelId:channel pitchVal:pitch panVal:pan gainVal:gain looping:loop checkState:FALSE];
+		} else {
+			//Didn't find a free channel
+			return CD_NO_SOURCE;
 		}	
 	}	
-	return [self _startSound:soundId channelId:channel pitchVal:pitch panVal:pan gainVal:gain looping:loop];
 }	
 
 /**
  * Internal method - use playSound instead.
  */
-- (ALuint)_startSound:(int) soundId channelId:(int) channelId pitchVal:(float) pitchVal panVal:(float) panVal gainVal:(float) gainVal looping:(BOOL) looping
+- (ALuint)_startSound:(int) soundId channelId:(int) channelId pitchVal:(float) pitchVal panVal:(float) panVal gainVal:(float) gainVal looping:(BOOL) looping checkState:(BOOL) checkState
 {
-	ALenum error;
+	
 	ALint state;
 	ALuint source = _sources[channelId];
 	ALuint buffer = _buffers[soundId];
 	
-	alGetSourcei(source, AL_SOURCE_STATE, &state);
-	if (state == AL_PLAYING) {
-		alSourceStop(source);
+	alGetError();//Clear the error code
+	
+	//If we are in interruptible mode then we check the state to see if the source 
+	//is already playing and if so stop it.  Otherwise in non interruptible mode
+	//we already know that the source is not playing.
+	if (checkState) {
+		alGetSourcei(source, AL_SOURCE_STATE, &state);
+		if (state == AL_PLAYING) {
+			alSourceStop(source);
+		}	
 	}	
 	
 	alSourcei(source, AL_BUFFER, buffer);//Attach to sound
@@ -395,13 +448,12 @@ extern void interruptionListenerCallback (void *inUserData, UInt32 interruptionS
 	alSourcefv(source, AL_POSITION, sourcePosAL);
 
 	alSourcePlay(source);
-	if((error = alGetError()) == AL_NO_ERROR) {
+	if((lastErrorCode = alGetError()) == AL_NO_ERROR) {
 		//Everything was okay
 		_sourceBufferAttachments[channelId] = buffer;//Keep track of which buffer source is attached to as alGetSourcei on AL_BUFFER does not seem to work
 		return source;
 	} else {
 		//Something went wrong - set error code and return failure code
-		lastErrorCode = error;
 		return CD_NO_SOURCE;
 	}	
 }
@@ -422,12 +474,30 @@ extern void interruptionListenerCallback (void *inUserData, UInt32 interruptionS
  * Stop a sound playing.
  * @param sourceId an OpenGL source identifier i.e. the return value of playSound
  */
-- (void)stopSound:(int) sourceId {
+- (void)stopSound:(ALuint) sourceId {
 	if (!functioning) {
 		return;
 	}	
 	alSourceStop(sourceId);
 }
+
+/**
+ * Set a channel group as non interruptible.  Default is that channel groups are interruptible.
+ * Non interruptible means that if a request to play a sound is made for a channel group and there are
+ * no free channels available then the play request will be ignored and CD_NO_SOURCE will be returned.
+ */
+- (void) setChannelGroupNonInterruptible:(int) channelGroupId isNonInterruptible:(BOOL) isNonInterruptible {
+	if (isNonInterruptible) {
+		_channelGroups[channelGroupId].currentIndex = CD_CHANNEL_GROUP_NON_INTERRUPTIBLE;
+	} else {
+		_channelGroups[channelGroupId].currentIndex = _channelGroups[channelGroupId].startIndex;
+	}	
+}
+ 
+
+-(ALCcontext *) openALContext {
+	return context;
+}	
 
 //Code to handle audio session interruption.  Thanks to Andy Fitter and Ben Britten.
 -(void)audioSessionInterrupted 
@@ -435,15 +505,15 @@ extern void interruptionListenerCallback (void *inUserData, UInt32 interruptionS
     CCLOG(@"Denshion: Audio session interrupted"); 
 	ALenum  error = AL_NO_ERROR;
     // Deactivate the current audio session 
-    OSStatus result = AudioSessionSetActive(NO); 
+    AudioSessionSetActive(NO); 
     // set the current context to NULL will 'shutdown' openAL 
     alcMakeContextCurrent(NULL); 
-	if(error = alGetError() != AL_NO_ERROR) {
+	if((error = alGetError()) != AL_NO_ERROR) {
 		CCLOG(@"Denshion: Error making context current %x\n", error);
 	} 
     // now suspend your context to 'pause' your sound world 
-    alcSuspendContext(_context); 
-	if(error = alGetError() != AL_NO_ERROR) {
+    alcSuspendContext(context); 
+	if((error = alGetError()) != AL_NO_ERROR) {
 		CCLOG(@"Denshion: Error suspending context %x\n", error);
 	} 
 } 
@@ -460,15 +530,76 @@ extern void interruptionListenerCallback (void *inUserData, UInt32 interruptionS
     result = AudioSessionSetActive(YES); 
 	
     // Restore open al context 
-    alcMakeContextCurrent(_context); 
-	if(error = alGetError() != AL_NO_ERROR) {
+    alcMakeContextCurrent(context); 
+	if((error = alGetError()) != AL_NO_ERROR) {
 		CCLOG(@"Denshion: Error making context current%x\n", error);
 	} 
     // 'unpause' my context 
-    alcProcessContext(_context); 
-	if(error = alGetError() != AL_NO_ERROR) {
+    alcProcessContext(context); 
+	if((error = alGetError()) != AL_NO_ERROR) {
 		CCLOG(@"Denshion: Error processing context%x\n", error);
 	} 
 } 
 
 @end
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+@implementation CDSourceWrapper
+
+-(void) setSourceId:(ALuint) newSourceId {
+	if ((newSourceId != CD_NO_SOURCE) && (newSourceId != CD_MUTE)) {
+		sourceId = newSourceId;
+	} else {
+		CCLOG(@"Denshion: Attempt to assign CD_MUTE or CD_NO_SOURCE to a source wrapper");
+	}	
+}	
+
+- (ALuint) sourceId {
+	return sourceId;
+}	
+
+- (void) setPitch:(float) newPitchValue {
+	lastPitch = newPitchValue;
+	alSourcef(sourceId, AL_PITCH, newPitchValue);	
+}	
+
+- (void) setGain:(float) newGainValue {
+	lastGain = newGainValue;
+	alSourcef(sourceId, AL_GAIN, newGainValue);	
+}
+
+- (void) setPan:(float) newPanValue {
+	lastPan = newPanValue;
+	float sourcePosAL[] = {newPanValue, 0.0f, 0.0f};//Set position - just using left and right panning
+	alSourcefv(sourceId, AL_POSITION, sourcePosAL);
+}
+
+- (BOOL) isPlaying {
+	ALint state;
+	alGetSourcei(sourceId, AL_SOURCE_STATE, &state);
+	return (state == AL_PLAYING);
+}	
+
+//alGetSource does not appear to work for pitch, pan and gain values
+//So we just remember the last value set
+- (float) pitch {
+	/*
+	//This does not work on simulator or device 
+	ALfloat pitchVal;
+	alGetSourcef(sourceId, AL_PITCH, &pitchVal);
+	return pitchVal;
+	*/ 
+	return lastPitch;
+}
+
+- (float) pan {
+	return lastPan;
+}
+
+- (float) gain {
+	return lastGain;
+}	
+
+@end
+
