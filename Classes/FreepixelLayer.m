@@ -16,12 +16,18 @@
 		self.isTouchEnabled = YES;
         AtlasSpriteManager *mgr = [AtlasSpriteManager spriteManagerWithFile:@"small-fry.png"];
         player = [FreepixelPlayer nodeWithManager:mgr];
-        player.position = ccp(300,200);
+        player.position = ccp(200,50);
         [player walkDown];
         [self addChild:mgr];
+        PointParticleSystem *snow = [ParticleSnow node];
+        snow.speed = 100;
+        snow.speedVar = 10;
+        [self addChild:snow];
         InvaderManager *invaders = [InvaderManager node];
         for(int i = 0 ; i < 10; i++) {
-            [invaders addInvaderWithStyle:i andPosition:ccp(20 + i*20,80)];
+            [[invaders addInvaderWithStyle:i andPosition:ccp(50 + i*20,200)] setRGB:255 :32 :32];
+            [[invaders addInvaderWithStyle:i + 1 andPosition:ccp(50 + i*20,180)] setRGB:255 :255 :255];
+            [[invaders addInvaderWithStyle:i + 2 andPosition:ccp(50 + i*20,160)] setRGB:0 :0 :255];
         }
         [self addChild:invaders];
     }

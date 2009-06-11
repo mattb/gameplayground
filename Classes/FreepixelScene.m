@@ -13,8 +13,8 @@
 - (id) init {
     self = [super init];
     if (self != nil) {        
-        GroundLayer *layer = [GroundLayer node];
-        [self addChild:layer];
+//        GroundLayer *layer = [GroundLayer node];
+//        [self addChild:layer];
         FreepixelLayer *clayer = [FreepixelLayer node];
         [self addChild:clayer];
         

@@ -20,12 +20,15 @@
     return self;
 }
 
-- (void)addInvaderWithStyle: (int)style andPosition:(CGPoint)position {
+- (Invader *)addInvaderWithStyle: (int)style andPosition:(CGPoint)position {
     Invader *invader = [Invader spriteWithRect:CGRectMake(style*16,0,16,16) spriteManager:self];
     invader.position = position;
     [self addChild:invader];
     [invaders addObject:invader];
-    [invader runAction:[MoveBy actionWithDuration:8 position:ccp(500,0)]];
+    MoveBy *left = [MoveBy actionWithDuration:2.5 position:ccp(220,0)];
+    Action *leftright = [RepeatForever actionWithAction:[Sequence actions:left, [left reverse], nil]];
+    [invader runAction:leftright];
+    return invader;
 }
 
 + (CocosNode *)node {

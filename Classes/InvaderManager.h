@@ -14,6 +14,6 @@
     NSMutableArray *invaders;
 }
 
-- (void)addInvaderWithStyle: (int)style andPosition:(CGPoint)position;
+- (Invader *)addInvaderWithStyle: (int)style andPosition:(CGPoint)position;
 
 @end
