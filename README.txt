@@ -44,3 +44,5 @@ First attempt uses a ringbuffer of the last ten touches and timestamps, and uses
 
 12. Add a new scene to play with the Freepixel sprite sheet from http://www.squidi.net/pixel/char.default.php
 http://github.com/mattb/gameplayground/tree/d4dc28e4cadfff3dfd1804cd7f05048dc170fd80
+
+13. Make some space invaders from a sprite sheet found via google image search (sorry!)

@@ -15,6 +15,9 @@
 		6E6E10820FC0AA9200E5CA7B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E6E10800FC0AA9200E5CA7B /* OpenGLES.framework */; };
 		6E6E10830FC0AA9200E5CA7B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E6E10810FC0AA9200E5CA7B /* QuartzCore.framework */; };
 		6E6E112F0FC0AD8E00E5CA7B /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6E6E112E0FC0AD8E00E5CA7B /* README.txt */; };
+		D900D0910FE19E0B0092D0D5 /* spaceinvaders.pvr in Resources */ = {isa = PBXBuildFile; fileRef = D900D0900FE19E0B0092D0D5 /* spaceinvaders.pvr */; };
+		D900D0950FE19E910092D0D5 /* Invader.m in Sources */ = {isa = PBXBuildFile; fileRef = D900D0940FE19E910092D0D5 /* Invader.m */; };
+		D900D0980FE19EE90092D0D5 /* InvaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D900D0970FE19EE90092D0D5 /* InvaderManager.m */; };
 		D91AB8D30FDBE8F1001B7154 /* small-fry.png in Resources */ = {isa = PBXBuildFile; fileRef = D91AB8D20FDBE8F1001B7154 /* small-fry.png */; };
 		D91AB8E00FDBEB78001B7154 /* FreepixelPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D91AB8DF0FDBEB78001B7154 /* FreepixelPlayer.m */; };
 		D91AB91D0FDBEE23001B7154 /* FreepixelLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D91AB91C0FDBEE23001B7154 /* FreepixelLayer.m */; };
@@ -177,6 +180,11 @@
 		6E6E10810FC0AA9200E5CA7B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6E6E112E0FC0AD8E00E5CA7B /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D900D0900FE19E0B0092D0D5 /* spaceinvaders.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; path = spaceinvaders.pvr; sourceTree = "<group>"; };
+		D900D0930FE19E910092D0D5 /* Invader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invader.h; sourceTree = "<group>"; };
+		D900D0940FE19E910092D0D5 /* Invader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invader.m; sourceTree = "<group>"; };
+		D900D0960FE19EE90092D0D5 /* InvaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvaderManager.h; sourceTree = "<group>"; };
+		D900D0970FE19EE90092D0D5 /* InvaderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvaderManager.m; sourceTree = "<group>"; };
 		D91AB8D20FDBE8F1001B7154 /* small-fry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-fry.png"; sourceTree = "<group>"; };
 		D91AB8DE0FDBEB78001B7154 /* FreepixelPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreepixelPlayer.h; sourceTree = "<group>"; };
 		D91AB8DF0FDBEB78001B7154 /* FreepixelPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreepixelPlayer.m; sourceTree = "<group>"; };
@@ -483,6 +491,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D900D0900FE19E0B0092D0D5 /* spaceinvaders.pvr */,
 				D91AB8D20FDBE8F1001B7154 /* small-fry.png */,
 				D92339D60FCC9CB90081F9E3 /* fire.png */,
 				D92339D00FCC9C9D0081F9E3 /* fire.pvr */,
@@ -786,6 +795,10 @@
 				D930920D0FCB40D300A3FE2C /* Obstacle.m */,
 				D91AB8DE0FDBEB78001B7154 /* FreepixelPlayer.h */,
 				D91AB8DF0FDBEB78001B7154 /* FreepixelPlayer.m */,
+				D900D0930FE19E910092D0D5 /* Invader.h */,
+				D900D0940FE19E910092D0D5 /* Invader.m */,
+				D900D0960FE19EE90092D0D5 /* InvaderManager.h */,
+				D900D0970FE19EE90092D0D5 /* InvaderManager.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -914,6 +927,7 @@
 				D92339D70FCC9CB90081F9E3 /* fire.png in Resources */,
 				D92AF0380FD00D1C004F8211 /* muybridge.pvr in Resources */,
 				D91AB8D30FDBE8F1001B7154 /* small-fry.png in Resources */,
+				D900D0910FE19E0B0092D0D5 /* spaceinvaders.pvr in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1004,6 +1018,8 @@
 				D91AB8E00FDBEB78001B7154 /* FreepixelPlayer.m in Sources */,
 				D91AB91D0FDBEE23001B7154 /* FreepixelLayer.m in Sources */,
 				D91AB9250FDBEEA8001B7154 /* FreepixelScene.m in Sources */,
+				D900D0950FE19E910092D0D5 /* Invader.m in Sources */,
+				D900D0980FE19EE90092D0D5 /* InvaderManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

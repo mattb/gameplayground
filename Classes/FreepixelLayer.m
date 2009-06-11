@@ -7,7 +7,7 @@
 //
 
 #import "FreepixelLayer.h"
-
+#import "InvaderManager.h"
 
 @implementation FreepixelLayer
 - (id) init {
@@ -19,6 +19,11 @@
         player.position = ccp(300,200);
         [player walkDown];
         [self addChild:mgr];
+        InvaderManager *invaders = [InvaderManager node];
+        for(int i = 0 ; i < 10; i++) {
+            [invaders addInvaderWithStyle:i andPosition:ccp(20 + i*20,80)];
+        }
+        [self addChild:invaders];
     }
     return self;
 }
